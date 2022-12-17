@@ -1,10 +1,15 @@
-import React from 'react'
+import React from 'react';
+import styled from 'styled-components';
 
 
-const Input = () => {
+const Input = ({nickname, onChange}) => {
+
   return (
-    <div>Input</div>
-  )
+    <Nickname type="text" value={nickname} onChange={onChange}></Nickname>
+  );
 }
+
+const Nickname = styled.input`
+`
 
 export default Input;

@@ -2,10 +2,13 @@ import React from 'react'
 
 const LandScreen = () => {
   return (
-    <div>
+    <Container>
       I am the land screen
-    </div>
+    </Container>
   )
 }
+
+const Container = styled.div`
+`
 
 export default LandScreen

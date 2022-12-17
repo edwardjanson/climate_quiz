@@ -2,10 +2,12 @@ import React from 'react'
 
 const GeneralScreen = () => {
   return (
-    <div>
+    <Container>
       I am the General screen
-    </div>
+    </Container>
   )
 }
+const Container = styled.div`
+`
 
 export default GeneralScreen;

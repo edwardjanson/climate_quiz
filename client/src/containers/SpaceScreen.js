@@ -2,10 +2,13 @@ import React from 'react'
 
 const SpaceScreen = () => {
   return (
-    <div>
+    <Container>
       I am the space screen
-    </div>
+    </Container>
   )
 }
+
+const Container = styled.div`
+`
 
 export default SpaceScreen;

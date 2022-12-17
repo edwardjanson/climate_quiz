@@ -1,10 +1,15 @@
-import React from 'react'
+import React from 'react';
+import styled from 'styled-components';
 
 
-const Button = () => {
+const Button = ({onClick, children}) => {
+
   return (
-    <div>Button</div>
-  )
+    <StyledButton onClick={onClick}>{children}</StyledButton>
+  );
 }
+
+const StyledButton = styled.button`
+`
 
 export default Button;

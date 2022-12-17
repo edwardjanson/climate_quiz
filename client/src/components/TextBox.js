@@ -1,10 +1,14 @@
-import React from 'react'
+import React from 'react';
+import styled from 'styled-components';
 
 
-const TextBox = () => {
+const TextBox = ({children}) => {
   return (
-    <div>TextBox</div>
+    <Text>{children}</Text>
   )
 }
+
+const Text = styled.div`
+`
 
 export default TextBox;

@@ -1,10 +1,16 @@
-import React from 'react'
+import React from 'react';
+import styled from 'styled-components';
 
 
-const Title = () => {
+const Title = ({children}) => {
   return (
-    <div>Title</div>
+    <Heading>{children}</Heading>
   )
 }
+
+const Heading = styled.h1`
+  font-size: 1.2rem;
+`
+
 
 export default Title;

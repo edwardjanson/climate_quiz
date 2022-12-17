@@ -2,10 +2,13 @@ import React from 'react'
 
 const AirScreen = () => {
   return (
-    <div>
+    <Container>
       I am the AirScreen
-    </div>
+    </Container>
   )
 }
+
+const Container = styled.div`
+`
 
 export default AirScreen;

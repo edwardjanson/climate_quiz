@@ -10,8 +10,9 @@ const GeneralScreen = ({questions}) => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [questionAnswered, setQuestionAnswered] = useState(false);
 
-  const handleAnswerClick = (correct_answer) => {
-    if (correct_answer) {
+  const handleAnswerClick = (evt) => {
+    console.log(evt)
+    if (evt.target.innerHTML === questions[currentQuestion].correct_answer) {
       // setScore(user.score + 1);
     }
     setQuestionAnswered(true);
@@ -25,10 +26,9 @@ const GeneralScreen = ({questions}) => {
   return (
     <Container>
       {!questionAnswered ?
-        
         <Question question={questions[currentQuestion]} onAnswer={handleAnswerClick} />
       :
-      <Answer question={questions[currentQuestion]} onNextQuestion={nextQuestionClick} />
+        <Answer question={questions[currentQuestion]} onNextQuestion={nextQuestionClick} />
       }
     </Container>
   )

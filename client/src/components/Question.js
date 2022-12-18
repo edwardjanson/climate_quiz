@@ -6,18 +6,18 @@ import Boolean from './Boolean';
 import Image from './Image';
 
 
-const Question = ({question}) => {
+const Question = ({question, onAnswer}) => {
   
   return (
     <>
       {question.question_type === "Multiple Choice" ? 
-            <MultipleChoice question={question} /> : ""}
+            <MultipleChoice question={question} onAnswer={onAnswer} /> : ""}
 
       {question.question_type === "Bool" ? 
-            <Boolean question={question} /> : ""}
+            <Boolean question={question} onAnswer={onAnswer} /> : ""}
 
       {question.question_type === "Images" ? 
-            <Image question={question} /> : ""}
+            <Image question={question} onAnswer={onAnswer} /> : ""}
     </>
   )
 }

@@ -8,7 +8,7 @@ import NavItem from "../components/NavItem";
 import Input from "../components/Input";
 
 
-const StartScreen = ({changeStage, questions}) => {
+const StartScreen = ({nextStage}) => {
 
     const [nickname, changeNickname] = useState("");
 
@@ -20,8 +20,8 @@ const StartScreen = ({changeStage, questions}) => {
         changeNickname(evt.target.value);
     }
 
-    const onButtonClick = () => {
-        changeStage(2);
+    const onStartClick = () => {
+        nextStage("General");
     }
 
     return (
@@ -33,7 +33,7 @@ const StartScreen = ({changeStage, questions}) => {
             <Title>Welcome</Title>
             <TextBox>This is example text</TextBox>
             <Input nickname={nickname} onChange={onInputChange}/>
-            <Button onClick={onButtonClick}>Start</Button>
+            <Button onClick={onStartClick}>Start</Button>
         </Container>
     )
 }

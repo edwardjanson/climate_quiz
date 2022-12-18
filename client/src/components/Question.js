@@ -1,11 +1,24 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Question = () => {
+import MultipleChoice from './MultipleChoice';
+import Boolean from './Boolean';
+import Image from './Image';
+
+
+const Question = ({question, onAnswer}) => {
+  
   return (
-    <Container>
-      I am the Question
-    </Container>
+    <>
+      {question.question_type === "Multiple Choice" ? 
+            <MultipleChoice question={question} onAnswer={onAnswer} /> : ""}
+
+      {question.question_type === "Bool" ? 
+            <Boolean question={question} onAnswer={onAnswer} /> : ""}
+
+      {question.question_type === "Images" ? 
+            <Image question={question} onAnswer={onAnswer} /> : ""}
+    </>
   )
 }
 

@@ -1,14 +1,39 @@
 import React from 'react'
 import styled from 'styled-components'
-import Question from '../components/Question'
+import { useState } from 'react'
 
-const GeneralScreen = () => {
+import Question from '../components/Question';
+import Answer from '../components/Answer';
+
+const GeneralScreen = ({questions}) => {
+
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [questionAnswered, setQuestionAnswered] = useState(false);
+
+  const handleAnswerClick = (evt) => {
+    console.log(evt)
+    if (evt.target.innerHTML === questions[currentQuestion].correct_answer) {
+      // setScore(user.score + 1);
+    }
+    setQuestionAnswered(true);
+  }
+
+  const nextQuestionClick = () => {
+    setCurrentQuestion(currentQuestion + 1);
+    setQuestionAnswered(false);
+  }
+
   return (
     <Container>
-      I am the General screen
+      {!questionAnswered ?
+        <Question question={questions[currentQuestion]} onAnswer={handleAnswerClick} />
+      :
+        <Answer question={questions[currentQuestion]} onNextQuestion={nextQuestionClick} />
+      }
     </Container>
   )
 }
+
 const Container = styled.div`
 `
 

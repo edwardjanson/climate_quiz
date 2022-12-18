@@ -2,10 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 
-const Answer = () => {
+const Answer = ({onNextQuestion}) => {
   return (
     <Container>
-      I am the Answer
+      <button onClick={onNextQuestion}>Next</button>
     </Container>
   )
 }

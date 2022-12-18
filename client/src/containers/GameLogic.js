@@ -6,33 +6,42 @@ import GeneralScreen from './GeneralScreen';
 import SpaceScreen from './SpaceScreen';
 import LandScreen from './LandScreen';
 import AirScreen from './AirScreen';
+import { getQuestions } from '../QuestionService';
 
 
 const GameLogic = () => {
 
-  const [stage, changeStage] = useState(1);
-
+  const [stage, changeStage] = useState("Start");
+  const [questions, setQuestions] = useState([]);
+  const [loaded, setLoaded] = useState(false)
+  
   useEffect(() => {
-  }, [stage])
-
+    if (!loaded) {
+      const allQuestions = async () => {
+        const gatheredQuestions = await getQuestions();
+        setQuestions(gatheredQuestions)
+        setLoaded(true)
+      } 
+    allQuestions();
+  }}, [stage, loaded])
   return (
       <>
-        {stage === 1 ? 
-          <StartScreen changeStage={changeStage} /> : ""}
+        {stage === "Start" ? 
+          <StartScreen changeStage={changeStage} questions={questions}/> : ""}
 
-        {stage === 2 ?
-          <GeneralScreen /> : ""}
+        {stage === "General" ?
+         <GeneralScreen changeStage={changeStage} questions={questions}/> : ""}
 
-        {stage === 3 ?
+        {stage === "Water" ?
           <WaterScreen /> : ""}
 
-        {stage === 4 ?
+        {stage === "Land" ?
           <LandScreen /> : ""}
 
-        {stage === 5 ?
+        {stage === "Air" ?
           <AirScreen /> : ""}
 
-        {stage === 6 ?
+        {stage === "Space" ?
           <SpaceScreen /> : ""}
         
       </>

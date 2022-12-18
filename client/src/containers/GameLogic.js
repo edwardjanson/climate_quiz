@@ -13,7 +13,8 @@ import { getUsers } from '../UsersService';
 const GameLogic = () => {
 
   const [stage, changeStage] = useState("Start");
-  const [questions, setQuestions] = useState([]);
+  const [allQuestions, setAllQuestions] = useState([]);
+  const [stageQuestions, setStageQuestions] = useState([]);
   const [loaded, setLoaded] = useState(false)
   const [users, setUsers] = useState([]);
   
@@ -22,19 +23,30 @@ const GameLogic = () => {
       const getAllData = async () => {
         const gatheredQuestions = await getQuestions();
         const gatheredUsers = await getUsers();
-        setUsers(gatheredUsers)
-        setQuestions(gatheredQuestions)
-        setLoaded(true)
-      } 
-    getAllData();
-  }}, [stage, loaded])
+        setAllQuestions(gatheredQuestions);
+        setUsers(gatheredUsers);
+        setLoaded(true);
+      }
+
+      getAllData();
+      
+    } else {
+      setStageQuestions(allQuestions.filter(question => question.section === stage))
+    }
+
+  }, [stage, loaded])
+
+  const nextStage = (stage) => {
+    changeStage(stage);
+  }
+
   return (
       <>
         {stage === "Start" ? 
-          <StartScreen changeStage={changeStage} questions={questions}/> : ""}
+          <StartScreen nextStage={nextStage} /> : ""}
 
         {stage === "General" ?
-         <GeneralScreen changeStage={changeStage} questions={questions}/> : ""}
+         <GeneralScreen nextStage={nextStage} questions={stageQuestions}/> : ""}
 
         {stage === "Water" ?
           <WaterScreen /> : ""}

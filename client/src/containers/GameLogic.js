@@ -7,6 +7,7 @@ import SpaceScreen from './SpaceScreen';
 import LandScreen from './LandScreen';
 import AirScreen from './AirScreen';
 import { getQuestions } from '../QuestionService';
+import { getUsers } from '../UsersService';
 
 
 const GameLogic = () => {
@@ -14,15 +15,18 @@ const GameLogic = () => {
   const [stage, changeStage] = useState("Start");
   const [questions, setQuestions] = useState([]);
   const [loaded, setLoaded] = useState(false)
+  const [users, setUsers] = useState([]);
   
   useEffect(() => {
     if (!loaded) {
-      const allQuestions = async () => {
+      const getAllData = async () => {
         const gatheredQuestions = await getQuestions();
+        const gatheredUsers = await getUsers();
+        setUsers(gatheredUsers)
         setQuestions(gatheredQuestions)
         setLoaded(true)
       } 
-    allQuestions();
+    getAllData();
   }}, [stage, loaded])
   return (
       <>

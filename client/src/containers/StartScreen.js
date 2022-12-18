@@ -8,7 +8,7 @@ import NavItem from "../components/NavItem";
 import Input from "../components/Input";
 
 
-const StartScreen = ({changeStage}) => {
+const StartScreen = ({changeStage, questions}) => {
 
     const [nickname, changeNickname] = useState("");
 

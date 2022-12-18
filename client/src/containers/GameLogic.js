@@ -29,14 +29,11 @@ const GameLogic = () => {
       }
 
       getAllData();
-      
-    } else {
-      setStageQuestions(allQuestions.filter(question => question.section === stage))
     }
-
   }, [stage, loaded])
 
   const nextStage = (stage) => {
+    setStageQuestions(allQuestions.filter(question => question.section === stage))
     changeStage(stage);
   }
 

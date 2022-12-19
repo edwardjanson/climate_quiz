@@ -35,16 +35,15 @@ const GameLogic = () => {
     changeStage(stage);
   }
 
-  // const openModal = () => {
-  //   setOpen(true)
-  // }
-  // const closeModal = () => {
-  //   setOpen(false)
-  // }
-
   const toggleModal = () => {
     setOpen(!open)
   }
+
+  const tryAgain = () => {
+    changeStage("Start")
+  }
+
+
   return (
       <>
         {stage === "Start" ? 
@@ -54,7 +53,7 @@ const GameLogic = () => {
         <QuestionsScreen nextStage={nextStage} questions={stageQuestions} stage={stage}/> : ""}
          
         {stage === "End" ? 
-        <EndScreen nextStage={nextStage} open={open} toggleModal={toggleModal}/> : ""}
+        <EndScreen nextStage={nextStage} open={open} toggleModal={toggleModal} tryAgain={tryAgain}/> : ""}
 
       </>
     );

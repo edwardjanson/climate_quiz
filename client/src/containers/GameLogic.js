@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from 'react';
-
-import StartScreen from "../containers/StartScreen";
-import WaterScreen from './WaterScreen';
-import GeneralScreen from './GeneralScreen';
-import SpaceScreen from './SpaceScreen';
-import LandScreen from './LandScreen';
-import AirScreen from './AirScreen';
 import { getQuestions } from '../QuestionService';
 import { getUsers } from '../UsersService';
+
+import StartScreen from "../containers/StartScreen";
+import EndScreen from './EndScreen';
+import QuestionsScreen from './QuestionsScreen';
 
 
 const GameLogic = () => {
@@ -40,23 +37,14 @@ const GameLogic = () => {
   return (
       <>
         {stage === "Start" ? 
-          <StartScreen nextStage={nextStage} /> : ""}
+        <StartScreen nextStage={nextStage} /> : ""}
 
-        {stage === "General" ?
-         <GeneralScreen nextStage={nextStage} questions={stageQuestions}/> : ""}
+        {(stage === "General" || stage === "Water" || stage === "Land" || stage === "Air" || stage === "Space") ?
+        <QuestionsScreen nextStage={nextStage} questions={stageQuestions} stage={stage}/> : ""}
+         
+        {stage === "End" ? 
+        <EndScreen nextStage={nextStage} /> : ""}
 
-        {stage === "Water" ?
-          <WaterScreen /> : ""}
-
-        {stage === "Land" ?
-          <LandScreen /> : ""}
-
-        {stage === "Air" ?
-          <AirScreen /> : ""}
-
-        {stage === "Space" ?
-          <SpaceScreen /> : ""}
-        
       </>
     );
     

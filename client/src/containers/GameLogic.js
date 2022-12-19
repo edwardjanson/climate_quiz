@@ -37,10 +37,10 @@ const GameLogic = () => {
   return (
       <>
         {stage === "Start" ? 
-          <StartScreen nextStage={nextStage} /> : ""}
+        <StartScreen nextStage={nextStage} /> : ""}
 
-        {stage !== "Start" || stage !== "End" ?
-         <QuestionsScreen nextStage={nextStage} questions={stageQuestions} stage={stage}/> : ""}
+        {(stage === "General" || stage === "Water" || stage === "Land" || stage === "Air" || stage === "Space") ?
+        <QuestionsScreen nextStage={nextStage} questions={stageQuestions} stage={stage}/> : ""}
          
         {stage === "End" ? 
         <EndScreen nextStage={nextStage} /> : ""}

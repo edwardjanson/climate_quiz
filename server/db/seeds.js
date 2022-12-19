@@ -92,7 +92,7 @@ db.questions.insertMany([
   },
   {
     "section": "Water",
-    "question_type": "Fact or Fiction",	
+    "question_type": "Bool",	
     "question": "Climate change affects sea turtles to be born male or female, because most turtles are subject to temperature-dependent sex determination",
     "correct_answer": "Fact",
     "incorrect_answers": [

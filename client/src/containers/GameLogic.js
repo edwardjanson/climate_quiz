@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { getQuestions } from '../QuestionService';
 import { getUsers } from '../UsersService';
-
+import { ReactDOM } from 'react-dom';
 import StartScreen from "../containers/StartScreen";
 import EndScreen from './EndScreen';
 import QuestionsScreen from './QuestionsScreen';
@@ -14,6 +14,7 @@ const GameLogic = () => {
   const [stageQuestions, setStageQuestions] = useState([]);
   const [loaded, setLoaded] = useState(false)
   const [users, setUsers] = useState([]);
+  const [open, setOpen] = useState(false);
   
   useEffect(() => {
     if (!loaded) {
@@ -34,6 +35,15 @@ const GameLogic = () => {
     changeStage(stage);
   }
 
+  const toggleModal = () => {
+    setOpen(!open)
+  }
+
+  const tryAgain = () => {
+    changeStage("General")
+  }
+
+
   return (
       <>
         {stage === "Start" ? 
@@ -43,7 +53,7 @@ const GameLogic = () => {
         <QuestionsScreen nextStage={nextStage} questions={stageQuestions} stage={stage}/> : ""}
          
         {stage === "End" ? 
-        <EndScreen nextStage={nextStage} /> : ""}
+        <EndScreen nextStage={nextStage} open={open} toggleModal={toggleModal} tryAgain={tryAgain}/> : ""}
 
       </>
     );

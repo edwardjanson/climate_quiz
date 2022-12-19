@@ -11,9 +11,18 @@ const QuestionsScreen = ({questions, stage, nextStage}) => {
   const [questionAnswered, setQuestionAnswered] = useState(false);
 
   const handleAnswerClick = (evt) => {
-    if (evt.target.innerHTML === questions[currentQuestion].correct_answer) {
-      // setScore(user.score + 1);
-    }
+    if (evt.target.innerHTML !== '') {
+      if (evt.target.innerHTML === questions[currentQuestion].correct_answer) {
+        // setScore(user.score + 1);
+      }
+    } else{
+      if (evt.target.src === questions[currentQuestion].correct_answer) {
+          // setScore(user.score + 1);
+          console.log(true)
+        }
+      }
+  
+    
     setQuestionAnswered(true);
   }
 

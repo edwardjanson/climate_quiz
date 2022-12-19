@@ -6,8 +6,8 @@ const Image = ({question, onAnswer}) => {
 
   return (
     <Container>
-        <p>Icon</p>
-        <p>{question.question}</p>
+        {/* <Icon>Icon</Icon> */}
+        <Question>{question.question}</Question>
         <p>Select one</p>
         <ImageContainer>
           <ImageItem onClick={onAnswer} src={question.correct_answer} />
@@ -32,5 +32,12 @@ const ImageContainer = styled.span`
 const ImageItem = styled.img`
   width: 18rem;
   height: 13rem;
+`
+
+const Icon = styled.img`
+
+`
+const Question = styled.p`
+
 `
 export default Image;

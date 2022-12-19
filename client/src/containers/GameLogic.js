@@ -53,7 +53,7 @@ const GameLogic = () => {
         <QuestionsScreen nextStage={nextStage} questions={stageQuestions} stage={stage}/> : ""}
          
         {stage === "End" ? 
-        <EndScreen nextStage={nextStage} open={open} toggleModal={toggleModal} tryAgain={tryAgain} goHome={goHome}/> : ""}
+        <EndScreen nextStage={nextStage} open={open} toggleModal={toggleModal} tryAgain={tryAgain}/> : ""}
 
       </>
     );

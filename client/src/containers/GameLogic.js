@@ -42,10 +42,6 @@ const GameLogic = () => {
   const tryAgain = () => {
     changeStage("General")
   }
-  
-  const goHome = () => {
-    changeStage("Start")
-  }
 
 
   return (

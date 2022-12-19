@@ -10,6 +10,7 @@ const Title = ({children}) => {
 
 const Heading = styled.h1`
   font-size: 1.2rem;
+  text-align: center;
 `
 
 

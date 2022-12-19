@@ -1,17 +1,37 @@
 import React from 'react';
 import styled from 'styled-components';
+// import Button from './Button';
 
 
-const Boolean = ({question, onAnswer}) => {
+const Boolean = ({questionTitle, onAnswer, answers}) => {
 
   return (
-    <>
-        <p>{question.question}</p>
-        <button onClick={onAnswer}>{question.correct_answer}</button>
-        <button onClick={onAnswer}>{question.incorrect_answers[0]}</button>
-    </>
+    <Container>
+        <p>Icon</p>
+        <Question>{questionTitle}</Question>
+        <ButtonsContainer>
+        <Button onClick={onAnswer}>{answers[0]}</Button>
+        <Button onClick={onAnswer}>{answers[1]}</Button>
+        </ButtonsContainer>
+    </Container>
   );
 }
 
+const Container = styled.div`
+text-align: center;
+`
+const ButtonsContainer = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+`
+
+const Button = styled.button`
+  padding: 1rem;
+  width: 30%;
+`
+
+const Question = styled.p`
+
+`
 
 export default Boolean;

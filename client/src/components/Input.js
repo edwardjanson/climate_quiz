@@ -10,6 +10,10 @@ const Input = ({nickname, onChange}) => {
 }
 
 const Nickname = styled.input`
+  width: 9rem;
+  text-align: center;
+  margin: 0.25rem;
+  padding: 0.25rem; 
 `
 
 export default Input;

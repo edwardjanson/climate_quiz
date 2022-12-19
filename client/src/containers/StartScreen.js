@@ -25,38 +25,39 @@ const StartScreen = ({nextStage}) => {
     }
 
     return (
-        <Container>
+        <div>
             <Navigation>
                 <NavItem><a href="/about">About</a></NavItem>
                 <NavItem onClick={openLeaderboard}>Leaderboard</NavItem>
             </Navigation>
-            <StartContainer>
-                <Title>Welcome</Title>
-                <TextBox>This is example text</TextBox>
-                <StartMenu>
-                    <Input nickname={nickname} onChange={onInputChange}/>
-                    <Button onClick={onStartClick}>Start</Button>
-                </StartMenu>
-            </StartContainer>
-        </Container>
+            <Container>
+                <StartContainer>
+                    <Title>Welcome to Climate Quiz</Title>
+                    <TextBox>Interesting facts that you may not know</TextBox>
+                    <StartMenu>
+                        <Input nickname={nickname} onChange={onInputChange}/>
+                        <Button onClick={onStartClick}>Start</Button>
+                    </StartMenu>
+                </StartContainer>
+            </Container>
+        </div>
     )
 }
 
 const Container = styled.div`
-`
-const StartContainer = styled.div`
-    margin-top: 50%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
-    background: rgba(0, 0, 0, 0.5);
-    width: 85%;
-    border-radius: 5px;
     color: white;
-    width: 100%;
-    padding-left: 0rem;
+`;
+
+const StartContainer = styled.div`
+  
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    width: 75%;
   `;
 
 const Navigation = styled.div`
@@ -65,7 +66,6 @@ const Navigation = styled.div`
     gap: 1rem;
     justify-content: right;
     padding: 1rem;
-    padding-right: 0rem;
 `;
 const StartMenu = styled.div`
     display: flex;

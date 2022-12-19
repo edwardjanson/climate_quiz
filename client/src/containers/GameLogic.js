@@ -40,6 +40,10 @@ const GameLogic = () => {
   }
 
   const tryAgain = () => {
+    changeStage("General")
+  }
+  
+  const goHome = () => {
     changeStage("Start")
   }
 
@@ -53,7 +57,7 @@ const GameLogic = () => {
         <QuestionsScreen nextStage={nextStage} questions={stageQuestions} stage={stage}/> : ""}
          
         {stage === "End" ? 
-        <EndScreen nextStage={nextStage} open={open} toggleModal={toggleModal} tryAgain={tryAgain}/> : ""}
+        <EndScreen nextStage={nextStage} open={open} toggleModal={toggleModal} tryAgain={tryAgain} goHome={goHome}/> : ""}
 
       </>
     );

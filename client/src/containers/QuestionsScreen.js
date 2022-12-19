@@ -5,7 +5,7 @@ import { useState } from 'react'
 import Question from '../components/Question';
 import Answer from '../components/Answer';
 
-const GeneralScreen = ({questions}) => {
+const QuestionsScreen = ({questions, stage}) => {
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [questionAnswered, setQuestionAnswered] = useState(false);
@@ -37,4 +37,4 @@ const GeneralScreen = ({questions}) => {
 const Container = styled.div`
 `
 
-export default GeneralScreen;
+export default QuestionsScreen;

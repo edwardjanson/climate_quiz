@@ -1,9 +1,9 @@
 import React from 'react'
 
-const EndGameScreen = () => {
+const EndScreen = () => {
   return (
     <Container>
-      I am the EndGameScreen
+      I am the EndScreen
     </Container>
   )
 }
@@ -11,4 +11,4 @@ const EndGameScreen = () => {
 const Container = styled.div`
 `
 
-export default EndGameScreen;
+export default EndScreen;

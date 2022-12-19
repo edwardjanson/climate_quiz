@@ -8,30 +8,72 @@ const Boolean = ({questionTitle, onAnswer, answers}) => {
   return (
     <Container>
         <p>Icon</p>
-        <Question>{questionTitle}</Question>
-        <ButtonsContainer>
-        <Button onClick={onAnswer}>{answers[0]}</Button>
-        <Button onClick={onAnswer}>{answers[1]}</Button>
-        </ButtonsContainer>
+        <QuestionSection>
+          <Question>{questionTitle}</Question>
+            <Questions>
+              <Button onClick={onAnswer}>{answers[0]}</Button>
+              <Button onClick={onAnswer}>{answers[1]}</Button>
+            </Questions>
+        </QuestionSection>
     </Container>
   );
 }
 
 const Container = styled.div`
-text-align: center;
-`
-const ButtonsContainer = styled.div`
+  height: 100vh;
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
 `
 
-const Button = styled.button`
+const QuestionSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 1rem;
-  width: 30%;
+  background: rgba(0, 0, 0, 0.5);
+  width: 85%;
+  border-radius: 5px;
+
+  @media (min-width: 768px) {
+    width: 60%;
+  }
+
+  @media (min-width: 1200px) {
+    width: 40%;
+  }
 `
 
 const Question = styled.p`
+  margin: 0;
+  padding-bottom: 1rem;
+  font-size: 1.5rem;
+`
 
+const Questions = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 90%;
+`
+
+const Button = styled.button`
+  font-size: 1rem;
+  text-align: center;
+  color: white;
+  padding: 1rem;
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 5px;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+  }
 `
 
 export default Boolean;

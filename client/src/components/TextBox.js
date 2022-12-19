@@ -9,6 +9,13 @@ const TextBox = ({children}) => {
 }
 
 const Text = styled.div`
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  column-gap: 4rem;
+  flex-wrap: wrap;
+  margin: 0.25rem;
+  padding: 0.25rem;
 `
 
 export default TextBox;

@@ -9,20 +9,25 @@ const QuestionsScreen = ({questions, stage, nextStage}) => {
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [questionAnswered, setQuestionAnswered] = useState(false);
+  const [correctAnswer, setCorrectAnswer] = useState(null);
 
   const handleAnswerClick = (evt) => {
-    if (evt.target.innerHTML !== '') {
+    if (evt.target.innerHTML) {
       if (evt.target.innerHTML === questions[currentQuestion].correct_answer) {
         // setScore(user.score + 1);
+        setCorrectAnswer(true);
+      } else {
+        setCorrectAnswer(false);
       }
-    } else{
+    } else {
       if (evt.target.src === questions[currentQuestion].correct_answer) {
           // setScore(user.score + 1);
-          console.log(true)
-        }
+        setCorrectAnswer(true);
+      } else {
+        setCorrectAnswer(false);
       }
-  
-    
+    }
+
     setQuestionAnswered(true);
   }
 
@@ -61,7 +66,7 @@ const QuestionsScreen = ({questions, stage, nextStage}) => {
       {!questionAnswered ?
         <Question question={questions[currentQuestion]} onAnswer={handleAnswerClick} />
       :
-        <Answer question={questions[currentQuestion]} onNextQuestion={nextQuestionClick} />
+        <Answer question={questions[currentQuestion]} onNextQuestion={nextQuestionClick} correctAnswer={correctAnswer} />
       }
     </Container>
   )

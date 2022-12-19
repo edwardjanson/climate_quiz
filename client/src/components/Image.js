@@ -2,15 +2,15 @@ import React from 'react';
 import styled from 'styled-components';
 
 
-const Image = ({question, onAnswer}) => {
+const Image = ({question, onAnswer, questionTitle, answers}) => {
 
   return (
     <Container>
-        <Question>{question.question}</Question>
+        <Question>{questionTitle}</Question>
         <p>Select one</p>
         <ImageContainer>
-          <ImageItem onClick={onAnswer} src={question.correct_answer} />
-          <ImageItem onClick={onAnswer} src={question.incorrect_answers[0]} />
+          <ImageItem onClick={onAnswer} src={answers[0]} />
+          <ImageItem onClick={onAnswer} src={answers[1]} />
         </ImageContainer>
     </Container>
   );

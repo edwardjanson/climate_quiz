@@ -1,9 +1,16 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import { useState } from 'react'
 
 import Question from '../components/Question';
 import Answer from '../components/Answer';
+import GeneralBackground from '../components/GeneralBackground';
+import WaterBackground from '../components/WaterBackground';
+import LandBackground from '../components/LandBackground';
+import AirBackground from '../components/AirBackground';
+import SpaceBackground from '../components/SpaceBackground';
+import EndBackground from '../components/EndBackground';
+
 
 const QuestionsScreen = ({questions, stage, nextStage}) => {
 
@@ -61,6 +68,7 @@ const QuestionsScreen = ({questions, stage, nextStage}) => {
     }
   }
 
+
   return (
     <Container>
       {!questionAnswered ?
@@ -68,6 +76,25 @@ const QuestionsScreen = ({questions, stage, nextStage}) => {
       :
         <Answer question={questions[currentQuestion]} onNextQuestion={nextQuestionClick} correctAnswer={correctAnswer} />
       }
+      <>
+        {stage === "General" ?
+        <GeneralBackground/> : ""}
+
+        {stage === "Water" ?
+        <WaterBackground/> : ""}
+
+        {stage === "Land" ?
+        <LandBackground/> : ""}
+
+        {stage === "Air" ?
+        <AirBackground/> : ""}
+
+        {stage === "Space" ?
+        <SpaceBackground/> : ""}
+
+        {stage === "End" ?
+        <EndBackground/> : ""}
+      </>
     </Container>
   )
 }

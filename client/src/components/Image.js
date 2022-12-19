@@ -6,7 +6,6 @@ const Image = ({question, onAnswer}) => {
 
   return (
     <Container>
-        {/* <Icon>Icon</Icon> */}
         <Question>{question.question}</Question>
         <p>Select one</p>
         <ImageContainer>
@@ -34,9 +33,6 @@ const ImageItem = styled.img`
   height: 13rem;
 `
 
-const Icon = styled.img`
-
-`
 const Question = styled.p`
 
 `

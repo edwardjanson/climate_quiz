@@ -9,10 +9,10 @@ const MultipleChoice = ({questionTitle, answers, onAnswer}) => {
       <QuestionSection>
           <Question>{questionTitle}</Question>
           <Questions>
-            <Button onClick={onAnswer} >1. {answers[0]}</Button>
-            <Button onClick={onAnswer} >2. {answers[1]}</Button>
-            <Button onClick={onAnswer} >3. {answers[2]}</Button>
-            <Button onClick={onAnswer} >4. {answers[3]}</Button>
+            <Button onClick={onAnswer} >{answers[0]}</Button>
+            <Button onClick={onAnswer} >{answers[1]}</Button>
+            <Button onClick={onAnswer} >{answers[2]}</Button>
+            <Button onClick={onAnswer} >{answers[3]}</Button>
           </Questions>
       </QuestionSection>
     </Container>

@@ -43,10 +43,11 @@ const AboutScreen = () => {
     
     return (
 
+
         <Container>
             <Box>
                 <Navigation>
-                    <NavItem> <a href='/'>Home</a></NavItem>
+                  <NavItem> <a href='/'>Home</a></NavItem>
                 </Navigation>
                 <h2>About</h2>
                 <section>
@@ -69,7 +70,7 @@ const AboutScreen = () => {
                             <a href='https://education.nationalgeographic.org/resource/pollution'>National Geographic pollution facts</a>
                         </li>
                         <li>
-                        <a href='https://www.wastecare.co.uk/9-shocking-statistics-about-waste/'>Statistics on waste</a>
+                        <a href='https://www.weforum.org/agenda/2022/01/plastic-pollution-climate-change-solution/'>Plastic pollution</a>
                         </li>
                         <li>
                         <a href='https://eartheclipse.com/environment/types-solutions-land-pollution.html'>Solutions for land pollution</a>
@@ -90,18 +91,16 @@ const AboutScreen = () => {
                     <ul>
                         Space:
                         <li>
-                        <a href="https://www.nhm.ac.uk/discover/what-is-space-junk-and-why-is-it-a-problem.html">Space Junk</a>
+                           <a href="https://www.nhm.ac.uk/discover/what-is-space-junk-and-why-is-it-a-problem.html">Space Junk</a>
                         </li>
                         <li>
-                        <a href="https://research.noaa.gov/article/ArtMID/587/ArticleID/2884/Projected-increase-in-space-travel-may-damage-ozone-layer">Space Travel and the ozone layer</a>
+                           <a href="https://research.noaa.gov/article/ArtMID/587/ArticleID/2884/Projected-increase-in-space-travel-may-damage-ozone-layer">Space Travel and the ozone layer</a>
                         </li>
                         <li>
-                        <a href="https://www.nasa.gov/content/space-applications-of-hydrogen-and-fuel-cells">Fuel for space travel</a></li>
+                           <a href="https://spaceplace.nasa.gov/spacecraft-graveyard/en/">Satellites</a></li>
                     </ul> 
-
-
-                </section>
-                <p>{resourcesText}</p>
+                    </section>
+                    <p>{resourcesText}</p>
             </Box>
         </Container>
     );

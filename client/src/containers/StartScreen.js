@@ -8,16 +8,13 @@ import NavItem from "../components/NavItem";
 import Input from "../components/Input";
 import StartBackground from "../components/StartBackground";
 import ContainerBox from "../components/ContainerBox";
-import { postUser } from "../UsersService";
 import { Modal } from 'react-responsive-modal';
 import LeaderboardScreen from "./LeaderboardScreen";
 
 
-const StartScreen = ({nextStage, updateBackground, addNewUser, user, setUser,}) => {
+const StartScreen = ({users, nextStage, updateBackground, addNewUser, user, setUser,}) => {
 
-    const openLeaderboard = () => {
-        return;
-    }
+    const [open, setOpen] = useState(false);
 
     const onInputChange = (evt) => {
         const newUser = {nickname: "", score: 0};
@@ -26,22 +23,13 @@ const StartScreen = ({nextStage, updateBackground, addNewUser, user, setUser,}) 
     }
 
     const onStartClick = () => {
-        postUser(user)
-        .then(data => {
-            addNewUser(data);
-            setUser(data);
-            nextStage("General");
-        });
+        nextStage("General");
     }
-    
-    const [open, setOpen] = useState(false);
-    
 
     return (
         <ContainerBox>
              <Modal open={open} onClose={() => setOpen(false)}>
-                <LeaderboardScreen>
-                </LeaderboardScreen>
+                <LeaderboardScreen users={users} />
             </Modal> 
             <StartBackground updateBackground={updateBackground} />
             <Navigation>

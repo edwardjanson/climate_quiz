@@ -167,43 +167,43 @@ db.questions.insertMany([
       "False"
     ],
     "more_info": [
-      "this is paragraph 1",
-      "this is paragraph 2",
-      "this is paragraph 3"
+      "Wind power sits at the heart of the energy transition for many countries.",
+      "The race to build bigger, better wind turbines mirrors the efforts of global governments to increase their renewable power generation.",
+      "China has the world’s largest onshore windfarm in Gansu Province, built out of the Gobi Desert."
     ],
     "more_info_link": "https://www.power-technology.com/features/wind-energy-by-country/"
   },
   {
     "section": "Air",
     "question_type": "Multiple Choice",	
-    "question": "Which country had the least air pollution in the world in 2021?",
-    "correct_answer": "New Caledonia",
+    "question": "What is Black carbon?",
+    "correct_answer": "All of those",
     "incorrect_answers": [
-      "Finland", 
-      "New Zealand", 
-      "Estonia"
+      "A poisonous chemical released by the incineration of plastic.", 
+      "A pollutant with a global warming potential up to 5,000 times greater than carbon dioxide.", 
+      "None of those"
     ],
     "more_info": [
-      "this is paragraph 1",
-      "this is paragraph 2",
-      "this is paragraph 3"
+      "Open burning of waste is common in many parts of the world and is a major source of air pollution.",
+      "In 2019, the CIEL estimated that production and incineration of plastic would add 850 million metric tons of greenhouse gases to the atmosphere - equivalent to 189 coal-fired power plants.",
+      "By 2050 this could rise to 2.8 gigatons of carbon dioxide per year - or 615 coal plants’ worth."
     ],
-    "more_info_link": "https://www.u-earth.eu/post/world-most-least-polluted-countries"
+    "more_info_link": "https://www.weforum.org/agenda/2022/01/plastic-pollution-climate-change-solution/"
   },
   {
     "section": "Air",
     "question_type": "Multiple Choice",	
     "question": "How is air quality measured?",
-    "correct_answer": "AQI scale",
+    "correct_answer": "AQI (Air Quality Index) scale",
     "incorrect_answers": [
       "Sky color", 
       "Smell of air", 
       "Ozone level"
     ],
     "more_info": [
-      "this is paragraph 1",
-      "this is paragraph 2",
-      "this is paragraph 3"
+      "The greater the density of pollutants in the air, the higher the Air Quality Index, a scale that runs from zero to 500.",
+      "Air quality across the globe continues to deteriorate due to increasing emissions, threatening human health and contributing to climate change, biodiversity loss, and pollution and waste.",
+      "According to the World Health Organization, 99 per cent of the global population breathes unclean air, and air pollution causes 7 million premature deaths a year."
     ],
     "more_info_link": "https://www.unep.org/news-and-stories/story/how-air-quality-measured"
   },
@@ -220,45 +220,45 @@ db.questions.insertMany([
       "145,000"
     ],
     "more_info": [
-      "this is paragraph 1",
-      "this is paragraph 2",
-      "this is paragraph 3"
+      "Space junk, or space debris, is any piece of machinery or debris left by humans in space.",
+      "It can refer to big objects such as dead satellites that have failed or been left in orbit at the end of their mission.",
+      "It can also refer to smaller things, like bits of debris or paint flecks that have fallen off a rocket."
     ],
     "more_info_link": "https://www.nhm.ac.uk/discover/what-is-space-junk-and-why-is-it-a-problem.html"
   },
   {
     "section": "Space",
     "question_type": "Multiple Choice",	
-    "question": "WWhy projected increase in space travel may damage ozone layer?",
-    "correct_answer": "Aerosol emissions from spaceflight activities",
+    "question": "Why the projected increase in space travel may damage the ozone layer?",
+    "correct_answer": "Because of aerosol emissions from spaceflight activities",
     "incorrect_answers": [
-      "Heat produced by the Space Shuttle combustible", 
+      "Because of the heat produced by the Space Shuttle combustible", 
       "It won't affect the ozone layer", 
-      "The Space Shuttle passing through the Ozone layer"
+      "Because of the Space Shuttle passing through the Ozone layer"
     ],
     "more_info": [
-      "this is paragraph 1",
-      "this is paragraph 2",
-      "this is paragraph 3"
+      "Kerosene-burning rocket engines widely used by the global launch industry emit exhaust containing black carbon, directly into the stratosphere.",
+      "According to new NOAA research published in the Journal of Geophysical Research Atmospheres, a 10-fold increase in hydrocarbon fueled launches would damage the ozone layer, and change atmospheric circulation patterns.",
+      "Rockets are the only direct source of human-produced aerosol pollution above the troposphere, the lowest region of the atmosphere, which extends to a height of about 5 to 10 miles above the Earth’s surface."
     ],
     "more_info_link": "https://research.noaa.gov/article/ArtMID/587/ArticleID/2884/Projected-increase-in-space-travel-may-damage-ozone-layer"
   },
   {
     "section": "Space",
     "question_type": "Multiple Choice",	
-    "question": "Which kind of fuel does the NASA uses as Rocket Fuel?",
-    "correct_answer": "Hydrogen",
+    "question": "Approximately how many satelites are in the earth's orbit?",
+    "correct_answer": "5500",
     "incorrect_answers": [
-      "Coconut Oil", 
-      "Petrol", 
-      "Diesel"
+      "500", 
+      "1500", 
+      "2000"
     ],
     "more_info": [
-      "this is paragraph 1",
-      "this is paragraph 2",
-      "this is paragraph 3"
+      "Assembled by experts at the Union of Concerned Scientists (UCS), the Satellite Database is a listing of the more than 5,465 operational satellites currently in orbit around Earth.",
+      "The expert's intent in producing the database is to create a research tool for specialists and non-specialists alike by collecting open-source information on operational satellites and presenting it in a format that can be easily manipulated for research and analysis.",
+      "The US have the most satellites."
     ],
-    "more_info_link": "https://www.nasa.gov/content/space-applications-of-hydrogen-and-fuel-cells"
+    "more_info_link": "https://www.ucsusa.org/resources/satellite-database"
   }
   
 ]);

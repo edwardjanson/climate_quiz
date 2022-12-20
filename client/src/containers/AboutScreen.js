@@ -95,7 +95,7 @@ const About = () => {
                        <a href="https://research.noaa.gov/article/ArtMID/587/ArticleID/2884/Projected-increase-in-space-travel-may-damage-ozone-layer">Space Travel and the ozone layer</a>
                     </li>
                     <li>
-                       <a href="https://www.nasa.gov/content/space-applications-of-hydrogen-and-fuel-cells">Fuel for space travel</a></li>
+                       <a href="https://spaceplace.nasa.gov/spacecraft-graveyard/en/">Satellites</a></li>
                 </ul> 
 
 

@@ -40,7 +40,7 @@ const GameLogic = ({updateBackground}) => {
   }
 
   const tryAgain = () => {
-    changeStage("General")
+    nextStage("General")
   }
 
 

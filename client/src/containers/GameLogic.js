@@ -14,6 +14,7 @@ const GameLogic = ({updateBackground}) => {
   const [stageQuestions, setStageQuestions] = useState([]);
   const [loaded, setLoaded] = useState(false)
   const [users, setUsers] = useState([]);
+  const [user, setUser] = useState({})
   
   useEffect(() => {
     if (!loaded) {
@@ -38,11 +39,17 @@ const GameLogic = ({updateBackground}) => {
     nextStage("General")
   }
 
+  const addNewUser = (data) => {
+    const newUsers = [...users];
+    newUsers.push(data)
+    setUsers(newUsers)
+  }
+
 
   return (
       <>
         {stage === "Start" ? 
-        <StartScreen nextStage={nextStage} updateBackground={updateBackground} /> : ""}
+        <StartScreen nextStage={nextStage} updateBackground={updateBackground} addNewUser={addNewUser} user={user} setUser={setUser} />  : ""}
 
         {(stage === "General" || stage === "Water" || stage === "Land" || stage === "Air" || stage === "Space") ?
         <QuestionsScreen nextStage={nextStage} questions={stageQuestions} stage={stage} updateBackground={updateBackground} /> : ""}

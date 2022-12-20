@@ -130,7 +130,7 @@ db.questions.insertMany([
     "question": "Just 16% of plastics are recycled - the rest goes to landfill for incineration, or is just dumped",
     "correct_answer": "TRUE",
     "incorrect_answers": [
-      "False"
+      "FALSE"
     ],
     "more_info": [
       "Much of the plastic that does not make it to the recycling plant ends up in our rivers and ocean.",
@@ -162,9 +162,9 @@ db.questions.insertMany([
     "section": "Air",
     "question_type": "Bool",	
     "question": "In 2021, China was the world leader in wind energy, with over one-quarter of the world’s wind power capacity",
-    "correct_answer": "True",
+    "correct_answer": "TRUE",
     "incorrect_answers": [
-      "False"
+      "FALSE"
     ],
     "more_info": [
       "Wind power sits at the heart of the energy transition for many countries.",

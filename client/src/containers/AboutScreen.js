@@ -7,39 +7,63 @@ import ContainerBox from '../components/ContainerBox';
 
 const AboutScreen = () => {
     
-    const resourcesText = `Climate change is accelerating faster than previously thought, and it’s already having devastating effects.
-    There’s no safe level of global warming. We’ve already warmed by 1.1 degrees and we’re at risk of triggering feedback loops. Every tenth of a degree of global warming is dangerous and puts the world at greater risk.
-    To give ourselves the best chance, we need to stop, and reverse global warming.
-    The lion’s share of emissions reductions must occur this decade.
-    Scotland and the UK need to cut our greenhouse gas emissions by 75% by 2030, race to net-zero emissions by 2045, and then keep drawing carbon out of our atmosphere.
-    We need action from all levels of society, but without government-level action this will be incredibly hard, if not impossible.
-    Government will act on their plan when we create the social climate that allows and demands action.
-    We can each help create this social climate by:
-    Engaging our MSPs and MPs,
-    Standing up to private interests,
-    And having conversations with people who are concerned, but not yet committed, to bring them on board.
-    If you’re ready to get started, there are some great tips for having effective conversations with people about climate change in C4C Australia’s Climate Conversation Guide - an excellent resource!
-    Hosting a Climate Conversation: Thank you for signing up to host your own Climate Conversation. You are a leader! By reaching out to the people around you and letting them know that climate change is important to you, you’re breaking a dangerous silence, helping bring about social change and building the climate movement - and your actions will inspire others to step up too. I’ll send a separate email confirming this shortly.
-    Joining an MSP/MP engagement group: Thank you for your interest! This support group is an excellent way to get started in an easy way and friendly setting. They are currently run monthly online but if you’d like to get one started locally, we can help you with that. Please email c4c@scottishcommunitiescan.org.uk to join the next session.
-    Contacting your MSP / MP: Thank you for pledging to contact your local MSP/MP. The best thing people can do to get focused on an issue is to make a lot of ‘noise’ - let’s get your MSP/MP working for you!
-    Here is an excellent website where you will find contact details for your local MSP, MP and councillors.
-    Further resources include:
-    Scottish Parliament guidelines on Issues your MSP can help you with
-    Friends of the Earth’s guide on How to lobby your MSP
-    RSPB’s guide on Contacting your MSP to help nature and the climate
-    Stop Climate Chaos Scotland’s guide on Meeting with your MSP
-    The Climate Coalition’s guide on Writing to your MP about Climate Change
-    Campaign against Climate Change tips on Influencing your MP on Climate Change
-    Hubbub’s template for Writing to your MP
-    Here are 2 powerful messages you can take to your local representatives (source):
-    To your MSP: The Scottish Government must tighten up plans to meet 2030 targets with a focus on decarbonising homes, transport and industry. Chris Sark says ‘we haven’t seen those kinds of policies’.
-    And to your MP: The Scottish and the UK government need to cooperate on carbon capture and storage and the UK government needs to stop supporting new oil fields.
-    If you are interested in hosting an MSP / MP Engagement Group, please email c4c@scottishcommunitiescan.org.au. We will support you in getting started. An MSP Engagement Group provides an easy, effective and fun way to take democratic action while being supported by others. You can also check out C4C Australia's resources here.
-    Joining a local group: Thank you for expressing an interest in joining a local community climate action group. There are many voluntary groups working to tackle climate change in your area offering activities such as community gardens, climate cafes, training, networking opportunities, film screenings, bike activities, volunteering and more….perhaps you could even start a MSP or MP engagement group with their support. Here is a map of some local community groups.
-    Monthly newsletter: I’ve signed you up to our mailing list - you should now receive SCCAN’s monthly newsletter, which will keep you up to date with all the latest community climate action news, events, consultations and all that SCCAN is doing!
-    You can follow us on social media: Facebook, Twitter, Instagram, LinkedIn and Youtube. You will find relevant articles, consultations, events and ideas.
-    In case you didn’t get around to it at the Conversation, here’s the link to become a SCCAN member: https://www.scottishcommunitiescan.org.uk/join-us/. We’re a network of community groups and individuals all across Scotland tackling climate change. Membership is free.`
-    
+    const resourcesText = [
+      `Climate change is accelerating faster than previously thought, and it’s already having devastating effects.`,
+
+      `There’s no safe level of global warming. We’ve already warmed by 1.1 degrees and we’re at risk of triggering feedback loops. Every tenth of a degree of global warming is dangerous and puts the world at greater risk.`,
+
+      `To give ourselves the best chance, we need to stop, and reverse global warming.`,
+
+      `The lion’s share of emissions reductions must occur this decade.`,
+
+      `Scotland and the UK need to cut our greenhouse gas emissions by 75% by 2030, race to net-zero emissions by 2045, and then keep drawing carbon out of our atmosphere.`,
+
+      `We need action from all levels of society, but without government-level action this will be incredibly hard, if not impossible.`,
+
+      `Government will act on their plan when we create the social climate that allows and demands action.`,
+
+      `We can each help create this social climate by:`,
+
+      `- Engaging our MSPs and MPs,`,
+      `- Standing up to private interests,`,
+      `- And having conversations with people who are concerned, but not yet committed, to bring them on board.`,
+
+      `If you’re ready to get started, there are some great tips for having effective conversations with people about climate change in C4C Australia’s Climate Conversation Guide (https://drive.google.com/file/d/1Tt6-ueh8vdS0Jf3WkGK4Jr3OEduGANxA/view) - an excellent resource!`,
+
+      `Other steps you can take to make a difference:`
+      `Joining an MSP/MP engagement group: This support group is an excellent way to get started in an easy way and friendly setting. They are currently run monthly online but if you’d like to get one started locally, we can help you with that. Please email c4c@scottishcommunitiescan.org.uk to join the next session.`,
+
+      `Contacting your MSP / MP: The best thing people can do to get focused on an issue is to make a lot of ‘noise’ - let’s get your MSP/MP working for you!`,
+
+      `Here is an excellent website where you will find contact details for your local MSP, MP and councillors: https://www.writetothem.com/ .`,
+      
+      `Further resources include:`,
+
+      `Scottish Parliament guidelines on Issues your MSP can help you with: https://www.parliament.scot/msps/about-msps/what-issues-an-msp-can-help-you-with `,
+
+      `Friends of the Earth’s guide on How to lobby your MSP: https://foe.scot/get-involved/people-power-network/how-to-lobby-your-msps/ `,
+
+      `RSPB’s guide on Contacting your MSP to help nature and the climate: https://community.rspb.org.uk/ourwork/b/scotland/posts/getting-in-touch-with-your-msps-to-help-nature-and-the-climate `,
+
+      `Stop Climate Chaos Scotland’s guide on Meeting with your MSP: https://www.stopclimatechaos.scot/wp-content/uploads/2018/09/Meeting-your-MSP-Guide-web.pdf `,
+
+      `The Climate Coalition’s guide on Writing to your MP about Climate Change: https://www.theclimatecoalition.org/write-to-your-mp `,
+
+      `Campaign against Climate Change tips on Influencing your MP on Climate Change: https://www.campaigncc.org/lobbying_mps `,
+
+      `Hubbub’s template for Writing to your MP: https://www.hubbub.org.uk/writing-to-your-mp `,
+
+      `Here are 2 powerful messages you can take to your local representatives (source: https://www.bbc.co.uk/news/uk-scotland-57482228):`,
+
+      `To your MSP: The Scottish Government must tighten up plans to meet 2030 targets with a focus on decarbonising homes, transport and industry. Chris Sark says ‘we haven’t seen those kinds of policies’.`,
+
+      `And to your MP: The Scottish and the UK government need to cooperate on carbon capture and storage and the UK government needs to stop supporting new oil fields.`,
+
+      `Joining a local group: There are many voluntary groups working to tackle climate change in your area offering activities such as community gardens, climate cafes, training, networking opportunities, film screenings, bike activities, volunteering and more….perhaps you could even start a MSP or MP engagement group with their support.`, 
+      `Here is a map of some local community groups: https://sccan.scot/our-members/ .`,
+
+      `To become a member of SCCAN (a network of community groups and individuals all across Scotland tackling climate change): https://www.scottishcommunitiescan.org.uk/join-us/. Membership is free!`
+    ]
     
     return (
 

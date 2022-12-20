@@ -1,12 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Modal } from 'react-responsive-modal';
+
 import NavItem from "../components/NavItem"
+import ContainerBox from '../components/ContainerBox';
+import Button from '../components/Button';
+
 
 const EndScreen = ({ toggleModal, open, tryAgain}) => {
 
   return (
-    <Container>
+    <ContainerBox>
       
       {open ?
       <Modal open={open} onClose={toggleModal}>
@@ -16,7 +20,7 @@ const EndScreen = ({ toggleModal, open, tryAgain}) => {
       </Modal> : 
       <section>
         <Navigation>
-          <NavItem> <a href='/'>Home</a></NavItem>
+          <NavItem><a href='/'>Home</a></NavItem>
         </Navigation>
         <EndCard>
           <p>You have finished</p> 
@@ -26,18 +30,10 @@ const EndScreen = ({ toggleModal, open, tryAgain}) => {
         </EndCard>
       </section>}
         
-    </Container>
+    </ContainerBox>
   )
 }
 
-const Container = styled.div`
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: white;
-`
 const EndCard = styled.div`
   display: flex;
   flex-direction: column;
@@ -45,14 +41,8 @@ const EndCard = styled.div`
   justify-content: center;
   gap: 2rem;
   padding: 1rem;
-  background: rgba(0, 0, 0, 0.5);
-  width: 85%;
-  border-radius: 5px;
 `
-const Button = styled.button`
-  padding: 1rem;
-  width: 50%;
-`
+
 const Navigation = styled.div`
   display: flex;
   flex-direction: row;
@@ -60,7 +50,9 @@ const Navigation = styled.div`
   justify-content: right;
   padding: 1rem;
 `
+
 const InfoText = styled.p`
   text-align: center;
 `
+
 export default EndScreen;

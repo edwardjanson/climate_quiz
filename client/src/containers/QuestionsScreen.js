@@ -10,6 +10,7 @@ import LandBackground from '../components/LandBackground';
 import AirBackground from '../components/AirBackground';
 import SpaceBackground from '../components/SpaceBackground';
 import EndBackground from '../components/EndBackground';
+import ContainerBox from '../components/ContainerBox';
 
 
 const QuestionsScreen = ({questions, stage, nextStage, updateBackground}) => {

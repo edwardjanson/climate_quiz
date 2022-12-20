@@ -10,10 +10,21 @@ const Button = ({onClick, children}) => {
 }
 
 const StyledButton = styled.button`
-  width: 10rem;
+  font-size: 1rem;
   text-align: center;
-  margin: 0.25rem;
-  padding: 0.25rem; 
+  justify-items: center;
+  color: white;
+  padding: 0.5rem;
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 5px;
+
+  &:hover {
+    background: white;
+    color: black;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+  }
 `
 
 export default Button;

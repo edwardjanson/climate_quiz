@@ -7,6 +7,7 @@ import Title from "../components/Title";
 import NavItem from "../components/NavItem";
 import Input from "../components/Input";
 import StartBackground from "../components/StartBackground";
+import ContainerBox from "../components/ContainerBox";
 
 
 const StartScreen = ({nextStage, updateBackground}) => {
@@ -26,41 +27,21 @@ const StartScreen = ({nextStage, updateBackground}) => {
     }
 
     return (
-        <div>
+        <ContainerBox>
             <StartBackground updateBackground={updateBackground} />
             <Navigation>
                 <NavItem><a href="/about">About</a></NavItem>
                 <NavItem onClick={openLeaderboard}>Leaderboard</NavItem>
             </Navigation>
-            <Container>
-                <StartContainer>
-                    <Title>Welcome to Climate Quiz</Title>
-                    <TextBox>Interesting facts that you may not know</TextBox>
-                    <StartMenu>
-                        <Input nickname={nickname} onChange={onInputChange}/>
-                        <Button onClick={onStartClick}>Start</Button>
-                    </StartMenu>
-                </StartContainer>
-            </Container>
-        </div>
+            <Title>Welcome to Climate Quiz</Title>
+            <TextBox>Interesting facts that you may not know</TextBox>
+            <StartMenu>
+                <Input nickname={nickname} onChange={onInputChange}/>
+                <Button onClick={onStartClick}>Start</Button>
+            </StartMenu>
+        </ContainerBox>
     )
 }
-
-const Container = styled.div`
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: white;
-`;
-
-const StartContainer = styled.div`
-  
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 5px;
-    width: 75%;
-  `;
 
 const Navigation = styled.div`
     display: flex;
@@ -68,13 +49,18 @@ const Navigation = styled.div`
     gap: 1rem;
     justify-content: right;
     padding: 1rem;
-`;
+`
+
 const StartMenu = styled.div`
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
     justify-content: center;
     padding: 1rem;
-`;
+
+    button {
+        width: 10rem;
+    }
+`
 
 export default StartScreen;

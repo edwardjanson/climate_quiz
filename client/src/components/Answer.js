@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import TextBox from './TextBox';
 import Button from './Button';
+import ContainerBox from './ContainerBox';
 
 
 const Answer = ({question, onNextQuestion, correctAnswer}) => {
@@ -12,43 +13,32 @@ const Answer = ({question, onNextQuestion, correctAnswer}) => {
   }
 
   return (
-    <Container>
-      <AnswerBox>
-        <TextBox>{question.question_type !== "Images" ? 
-                    correctAnswer ?
-                    "You are correct"
-                    :
-                    <>
-                      Incorrect answer. The correct answer was: <br/>
-                      {question.correct_answer}
-                    </>
+    <ContainerBox>
+      <TextBox>{question.question_type !== "Images" ? 
+                  correctAnswer ?
+                  "You are correct"
                   :
-                    correctAnswer ?
-                    "You are correct"
-                    :
-                    <>
-                      Incorrect answer. The correct answer was: <br/>
-                      <ImageItem src={question.correct_answer} />
-                    </>
-                  }
-                  </TextBox>
-        <Buttons>
-          <Button onClick={openInformation}>Find Out More</Button>
-          <Button onClick={onNextQuestion}>Next</Button>
-        </Buttons>
-      </AnswerBox>
-    </Container>
+                  <>
+                    Incorrect answer. The correct answer was: <br/>
+                    {question.correct_answer}
+                  </>
+                :
+                  correctAnswer ?
+                  "You are correct"
+                  :
+                  <>
+                    Incorrect answer. The correct answer was: <br/>
+                    <ImageItem src={question.correct_answer} />
+                  </>
+                }
+                </TextBox>
+      <Buttons>
+        <Button onClick={openInformation}>Find Out More</Button>
+        <Button onClick={onNextQuestion}>Next</Button>
+      </Buttons>
+    </ContainerBox>
   )
 }
-
-const Container = styled.div`
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: white;
-`
 
 const AnswerBox = styled.div`
   display: flex;

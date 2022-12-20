@@ -1,16 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import ContainerBox from '../components/ContainerBox';
+
 
 const About = () => {
     return (
-        <Container>
+        <ContainerBox>
             about
-        </Container>
+        </ContainerBox>
     );
 }
-
-const Container = styled.div`
-`
 
 export default About;

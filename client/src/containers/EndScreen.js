@@ -1,12 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Modal } from 'react-responsive-modal';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 import NavItem from "../components/NavItem"
 import ContainerBox from '../components/ContainerBox';
 import Button from '../components/Button';
 import LeaderboardScreen from './LeaderboardScreen';
+import Title from '../components/Title';
 
 
 const EndScreen = ({removeUser, users, user, tryAgain}) => {
@@ -20,11 +21,10 @@ const EndScreen = ({removeUser, users, user, tryAgain}) => {
         <LeaderboardScreen users={users} />
       </Modal> 
       <Navigation>
-        <NavItem><a href='/'>Home</a></NavItem>
+        <NavItem><Link href='/'>Home</Link></NavItem>
       </Navigation>
       <EndCard>
-        <p>You have finished</p> 
-        <p>{!scoreRemoved ? `Your score: ${user.score}` : "Your score was removed."}</p>
+        <Title>{!scoreRemoved ? `Your score: ${user.score}` : "Your score was removed."}</Title>
         <Button className='overlay' onClick={() => setOpen(true)}>Leaderboard</Button>
         <Button onClick={() => {
             removeUser();
@@ -33,7 +33,7 @@ const EndScreen = ({removeUser, users, user, tryAgain}) => {
         }>
           {!scoreRemoved ? "Remove Your Score" : "Score Removed"}
         </Button>
-        <Button><a href='/about'>About</a></Button>
+        <ButtonLink href='/about'><Button>About</Button></ButtonLink>
         <Button onClick={tryAgain}>Try Again</Button>
       </EndCard>
     </ContainerBox>
@@ -57,8 +57,31 @@ const Navigation = styled.div`
   padding: 1rem;
 `
 
-const InfoText = styled.p`
-  text-align: center;
+const Link = styled.a`
+  color: white;
+  text-decoration: none;
+
+  &:hover {
+      font-weight: bold;
+      cursor: pointer;
+  }
+`
+
+const ButtonLink = styled.a`
+  color: white;
+  text-decoration: none;
+
+  &:hover {
+      color: black;
+      cursor: pointer;
+  }
+
+  &:active {
+    background: white;
+    color: black;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+  }
 `
 
 export default EndScreen;

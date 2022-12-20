@@ -17,12 +17,10 @@ const Answer = ({question, onNextQuestion, correctAnswer}) => {
     <ContainerBox>
       <TextBox>{question.question_type !== "Images" ? 
                   correctAnswer ?
-                  "You are correct"
-    
-                  
+                  "You are correct!"
                   :
                   <>
-                    Incorrect answer. The correct answer was: <br/>
+                    Incorrect answer. The correct answer was: <br/><br/>
                     {question.correct_answer}
                   </>
                 :
@@ -30,11 +28,11 @@ const Answer = ({question, onNextQuestion, correctAnswer}) => {
                   "You are correct"
                   :
                   <>
-                    Incorrect answer. The correct answer was: <br/>
+                    Incorrect answer. The correct answer was: <br/><br/>
                     <ImageItem src={question.correct_answer} />
                   </>
                 }
-                </TextBox>
+      </TextBox>
       <Buttons>
         <Button onClick={() => setOpen(true)}>Find Out More</Button>
         <Button onClick={onNextQuestion}>Next</Button>
@@ -47,9 +45,11 @@ const Answer = ({question, onNextQuestion, correctAnswer}) => {
 }
 
 const Buttons = styled.div`
+  margin-top: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
 `
 
 const ImageItem = styled.img`

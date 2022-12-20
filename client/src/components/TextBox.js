@@ -16,6 +16,7 @@ const Text = styled.div`
   flex-wrap: wrap;
   margin: 0.25rem;
   padding: 0.25rem;
+  font-size: 1.1rem;
 `
 
 export default TextBox;

@@ -13,12 +13,12 @@ db.questions.insertMany([
     "incorrect_answers": [
       "Hot air being trapped in the atmosphere", 
       "A phenomenon that occurs every decade where global temperatures always rise then returns to normal", 
-      "Is a myth"
+      "A myth"
     ],
     "more_info": [
-      "this is paragraph 1",
-      "this is paragraph 2",
-      "this is paragraph 3"
+      "Climate change can be a natural process where temperature, rainfall, wind and other elements vary over decades or more.",
+      "But today we are experiencing rapid warming from human activities, primarily due to burning fossil fuels that generate greenhouse gas emissions.",
+      "Increasing greenhouse gas emissions from human activity act like a blanket wrapped around the earth, trapping the sun’s heat and raising temperatures."
     ],
     "more_info_link": "https://www.un.org/sites/un2.un.org/files/fastfacts-what-is-climate-change.pdf"
   },
@@ -26,18 +26,18 @@ db.questions.insertMany([
     "section": "General",
     "question_type": "Multiple Choice",	
     "question": "By how much has the animal population decreased in the last 50 years?",
-    "correct_answer": "70%",
+    "correct_answer": "69%",
     "incorrect_answers": [
       "20%", 
       "35%", 
       "40%"
     ],
     "more_info": [
-      "this is paragraph 1",
-      "this is paragraph 2",
-      "this is paragraph 3"
+      "The Living Planet Report 2022 is WWF’s most comprehensive study to date of trends in global biodiversity and the health of our planet.",
+      "he latest flagship publication reveals global wildlife populations have plummeted by 69% on average since 1970.",
+      "The staggering rate of decline is a severe warning that the rich biodiversity that sustains all life on our planet is in crisis, putting every species at risk – including us. "
     ],
-    "more_info_link": "https://www.cbsnews.com/news/endangered-species-animal-population-decline-world-wildlife-fund-new-report/"
+    "more_info_link": "https://livingplanet.panda.org/en-GB/"
   },
   {
     "section": "General",

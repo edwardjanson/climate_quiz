@@ -8,18 +8,18 @@ import NavItem from "../components/NavItem";
 import Input from "../components/Input";
 import StartBackground from "../components/StartBackground";
 import ContainerBox from "../components/ContainerBox";
+import { Modal } from 'react-responsive-modal';
+import LeaderboardScreen from "./LeaderboardScreen";
 
 
-const StartScreen = ({nextStage, updateBackground}) => {
+const StartScreen = ({users, nextStage, updateBackground, addNewUser, user, setUser,}) => {
 
-    const [nickname, changeNickname] = useState("");
-
-    const openLeaderboard = () => {
-        return;
-    }
+    const [open, setOpen] = useState(false);
 
     const onInputChange = (evt) => {
-        changeNickname(evt.target.value);
+        const newUser = {nickname: "", score: 0};
+        newUser["nickname"] = evt.target.value;
+        setUser(newUser);
     }
 
     const onStartClick = () => {
@@ -28,17 +28,21 @@ const StartScreen = ({nextStage, updateBackground}) => {
 
     return (
         <ContainerBox>
+             <Modal open={open} onClose={() => setOpen(false)}>
+                <LeaderboardScreen users={users} />
+            </Modal> 
             <StartBackground updateBackground={updateBackground} />
             <Navigation>
                 <NavItem><a href="/about">About</a></NavItem>
-                <NavItem onClick={openLeaderboard}>Leaderboard</NavItem>
+                <NavItem><button onClick={() => setOpen(true)}>Leaderboard</button></NavItem>
             </Navigation>
             <Title>Welcome to Climate Quiz</Title>
             <TextBox>Interesting facts that you may not know</TextBox>
             <StartMenu>
-                <Input nickname={nickname} onChange={onInputChange}/>
+                <Input nickname={user.nickname} onChange={onInputChange}/>
                 <Button onClick={onStartClick}>Start</Button>
             </StartMenu>
+            
         </ContainerBox>
     )
 }

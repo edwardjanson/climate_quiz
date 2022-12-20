@@ -280,5 +280,4 @@ db.users.insertMany([
     "nickname": "Luis",
     "score": 35
   }
-  
 ]);

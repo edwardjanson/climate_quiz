@@ -1,16 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Modal } from 'react-responsive-modal';
+import { useState } from 'react';
 
 import TextBox from './TextBox';
 import Button from './Button';
 import ContainerBox from './ContainerBox';
+import InformationScreen from '../containers/InformationScreen';
 
 
 const Answer = ({question, onNextQuestion, correctAnswer}) => {
 
-  const openInformation = () => {
-    return;
-  }
+  const [open, setOpen] = useState(false);
 
   return (
     <ContainerBox>
@@ -33,31 +34,15 @@ const Answer = ({question, onNextQuestion, correctAnswer}) => {
                 }
                 </TextBox>
       <Buttons>
-        <Button onClick={openInformation}>Find Out More</Button>
+        <Button onClick={() => setOpen(true)}>Find Out More</Button>
         <Button onClick={onNextQuestion}>Next</Button>
       </Buttons>
+      <Modal open={open} onClose={() => setOpen(false)}>
+        <InformationScreen info_paragraphs={question.more_info} question_link={question.more_info_link}/>
+      </Modal> 
     </ContainerBox>
   )
 }
-
-const AnswerBox = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  background: rgba(0, 0, 0, 0.5);
-  width: 85%;
-  border-radius: 5px;
-
-  @media (min-width: 768px) {
-    width: 60%;
-  }
-
-  @media (min-width: 1200px) {
-    width: 40%;
-  }
-`
 
 const Buttons = styled.div`
   display: flex;

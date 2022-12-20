@@ -36,6 +36,25 @@ const GlobalStyle = createGlobalStyle`
     background-image: url(${(props) => props.background});
     background-size: cover;
     background-position: center center;
+
+    .react-responsive-modal-modal {
+      width: 100%;
+      height: 100%;
+      margin: auto;
+      padding: 0;
+      background: rgba(0, 0, 0, 0.9);
+      color: white;
+    }
+
+    .react-responsive-modal-closeButton svg {
+      fill: white;
+    }
+
+    .react-responsive-modal-overlay,
+    .react-responsive-modal-container,
+    .react-responsive-modal-modal {
+      animation-fill-mode: forwards !important;
+    }
   }
 `
 

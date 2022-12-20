@@ -1,6 +1,7 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
 import { useState } from 'react'
+import { useEffect } from 'react';
 
 import Question from '../components/Question';
 import Answer from '../components/Answer';
@@ -13,23 +14,29 @@ import EndBackground from '../components/EndBackground';
 import ContainerBox from '../components/ContainerBox';
 
 
-const QuestionsScreen = ({addNewUser, questions, stage, nextStage, updateBackground}) => {
+const QuestionsScreen = ({addNewUser, questions, stage, nextStage, updateBackground, user, setUser}) => {
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [questionAnswered, setQuestionAnswered] = useState(false);
   const [correctAnswer, setCorrectAnswer] = useState(null);
 
+  const increaseScore = () => {
+   const userScore = {...user}
+    userScore.score += 5
+    setUser(userScore) 
+  }
+
   const handleAnswerClick = (evt) => {
     if (evt.target.innerHTML) {
       if (evt.target.innerHTML === questions[currentQuestion].correct_answer) {
-        // setScore(user.score + 1);
+        increaseScore();
         setCorrectAnswer(true);
       } else {
         setCorrectAnswer(false);
       }
     } else {
       if (evt.target.src === questions[currentQuestion].correct_answer) {
-          // setScore(user.score + 1);
+        increaseScore();
         setCorrectAnswer(true);
       } else {
         setCorrectAnswer(false);
@@ -74,9 +81,9 @@ const QuestionsScreen = ({addNewUser, questions, stage, nextStage, updateBackgro
   return (
     <Container>
       {!questionAnswered ?
-        <Question question={questions[currentQuestion]} onAnswer={handleAnswerClick} />
+        <Question question={questions[currentQuestion]} onAnswer={handleAnswerClick}/>
       :
-        <Answer question={questions[currentQuestion]} onNextQuestion={nextQuestionClick} correctAnswer={correctAnswer} />
+        <Answer question={questions[currentQuestion]} onNextQuestion={nextQuestionClick} correctAnswer={correctAnswer}/>
       }
       <>
         {stage === "General" ?

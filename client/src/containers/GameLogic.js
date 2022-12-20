@@ -38,6 +38,9 @@ const GameLogic = ({updateBackground}) => {
   }
 
   const tryAgain = () => {
+    const userToUpdate = {...user}
+    userToUpdate.score = 0
+    setUser(userToUpdate)
     nextStage("General")
   }
 
@@ -71,11 +74,11 @@ const GameLogic = ({updateBackground}) => {
         <StartScreen users={users} nextStage={nextStage} updateBackground={updateBackground} user={user} setUser={setUser} />  : ""}
 
         {(stage === "General" || stage === "Water" || stage === "Land" || stage === "Air" || stage === "Space") ?
-        <QuestionsScreen addNewUser={addNewUser} nextStage={nextStage} questions={stageQuestions} stage={stage} updateBackground={updateBackground} /> : ""}
+
+        <QuestionsScreen addNewUser={addNewUser} nextStage={nextStage} questions={stageQuestions} stage={stage} updateBackground={updateBackground} user={user} setUser={setUser}/> : ""}
          
         {stage === "End" ? 
         <EndScreen removeUser={removeUser} users={users} user={user} nextStage={nextStage} tryAgain={tryAgain} updateBackground={updateBackground} /> : ""}
-
       </>
     );
     

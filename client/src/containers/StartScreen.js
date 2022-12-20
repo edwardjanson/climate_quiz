@@ -8,22 +8,28 @@ import NavItem from "../components/NavItem";
 import Input from "../components/Input";
 import StartBackground from "../components/StartBackground";
 import ContainerBox from "../components/ContainerBox";
+import { postUser } from "../UsersService";
 
 
-const StartScreen = ({nextStage, updateBackground}) => {
-
-    const [nickname, changeNickname] = useState("");
+const StartScreen = ({nextStage, updateBackground, addNewUser, user, setUser,}) => {
 
     const openLeaderboard = () => {
         return;
     }
 
     const onInputChange = (evt) => {
-        changeNickname(evt.target.value);
+        const newUser = {nickname: "", score: 0};
+        newUser["nickname"] = evt.target.value;
+        setUser(newUser);
     }
 
     const onStartClick = () => {
-        nextStage("General");
+        postUser(user)
+        .then(data => {
+            addNewUser(data);
+            setUser(data);
+            nextStage("General");
+        });
     }
 
     return (
@@ -36,7 +42,7 @@ const StartScreen = ({nextStage, updateBackground}) => {
             <Title>Welcome to Climate Quiz</Title>
             <TextBox>Interesting facts that you may not know</TextBox>
             <StartMenu>
-                <Input nickname={nickname} onChange={onInputChange}/>
+                <Input nickname={user.nickname} onChange={onInputChange}/>
                 <Button onClick={onStartClick}>Start</Button>
             </StartMenu>
         </ContainerBox>

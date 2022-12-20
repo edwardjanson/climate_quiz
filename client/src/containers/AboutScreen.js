@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import NavItem from '../components/NavItem';
 
 const About = () => {
     
@@ -40,6 +40,9 @@ const About = () => {
     
     return (
         <Container>
+            <Navigation>
+                <NavItem> <a href='/'>Home</a></NavItem>
+            </Navigation>
             <h2>About</h2>
             <section>
                 <p>To find out more about:</p>
@@ -99,6 +102,14 @@ const About = () => {
 }
 
 const Container = styled.div`
+`
+
+const Navigation = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: right;
+  padding: 1rem;
 `
 
 export default About;

@@ -34,7 +34,7 @@ db.questions.insertMany([
     ],
     "more_info": [
       "The Living Planet Report 2022 is WWF’s most comprehensive study to date of trends in global biodiversity and the health of our planet.",
-      "he latest flagship publication reveals global wildlife populations have plummeted by 69% on average since 1970.",
+      "The latest flagship publication reveals global wildlife populations have plummeted by 69% on average since 1970.",
       "The staggering rate of decline is a severe warning that the rich biodiversity that sustains all life on our planet is in crisis, putting every species at risk – including us. "
     ],
     "more_info_link": "https://livingplanet.panda.org/en-GB/"

@@ -35,8 +35,10 @@ const ImageContainer = styled.span`
 `
 
 const ImageItem = styled.img`
-  width: 18rem;
-  height: 13rem;
+  width: 60%;
+  height: 60%;
+  object-fit: cover;
+
   border: 1px solid rgba(0, 0, 0, 0.5);
 
   &:hover {

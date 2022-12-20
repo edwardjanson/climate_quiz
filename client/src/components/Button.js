@@ -26,6 +26,13 @@ const StyledButton = styled.button`
     cursor: pointer;
     border: 1px solid rgba(0, 0, 0, 0.5);
   }
+
+  &:active {
+    background: white;
+    color: black;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+  }
 `
 
 export default Button;

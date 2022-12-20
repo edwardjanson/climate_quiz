@@ -48,47 +48,47 @@ db.questions.insertMany([
       "https://robbreport.com/wp-content/uploads/2022/08/Steak.jpg?w=1000%"
     ],
     "more_info": [
-      "this is paragraph 1",
-      "this is paragraph 2",
-      "this is paragraph 3"
+      "Animal-based foods are generally associated with the highest greenhouse gas emissions.",
+      "Meat production often requires extensive grasslands, which is often created by cutting down trees, releasing carbon dioxide stored in forests.",
+      "Shrimp farms often occupy coastal lands formerly covered in mangrove forests which absorb huge amounts of carbon. The large carbon footprint of shrimp or prawns is mainly due to the stored carbon that is released into the atmosphere when mangroves are cut down to create shrimp farms."
     ],
-    "more_info_link": "https://www.cbsnews.com/news/endangered-species-animal-population-decline-world-wildlife-fund-new-report/"
+    "more_info_link": "https://www.un.org/en/climatechange/science/climate-issues/food"
   },
 
   // Water
   {
     "section": "Water",
     "question_type": "Multiple Choice",	
-    "question": "What is one of the roles of ice caps?",
-    "correct_answer": "Reflect back the sun’s light.",
+    "question": "Why are ice caps important?",
+    "correct_answer": "All of those",
     "incorrect_answers": [
-      "wrong_1", 
-      "wrong_2", 
-      "wrong_3"
+      "They reflect the heat from the sun back into space, acting as the planet's refrigerator", 
+      "They prevent the release of large amounts of methane, a greenhouse gas that contributes to climate change", 
+      "None of those"
     ],
     "more_info": [
-      "this is paragraph 1",
+      "Polar ice caps are melting as global warming causes climate change.",
       "this is paragraph 2",
       "this is paragraph 3"
     ],
-    "more_info_link": "https://change.me"
+    "more_info_link": "https://www.worldwildlife.org/pages/six-ways-loss-of-arctic-ice-impacts-everyone"
   },
   {
     "section": "Water",
     "question_type": "Multiple Choice",	
-    "question": "What are dead zones and how did they happen?",
-    "correct_answer": "Areas where life cannot exist in the water. This can happen naturally but can also be caused by pollution.",
+    "question": "According to a new study by UNESCO, some of the world's most iconic glaciers are set to disappear by the year:",
+    "correct_answer": "2050",
     "incorrect_answers": [
-      "High radition areas due to nuclear waste", 
-      "Areas of low reception phone reception", 
-      "Areas containing very high oxygen levels, and are too high to support wildlife"
+      "2120", 
+      "2100", 
+      "2030"
     ],
     "more_info": [
       "this is paragraph 1",
       "this is paragraph 2",
       "this is paragraph 3"
     ],
-    "more_info_link": "https://oceanservice.noaa.gov/facts/deadzone.html"
+    "more_info_link": "https://news.un.org/en/story/2022/11/1130157#:~:text=Some%20of%20the%20world's%20most,efforts%20to%20limit%20temperature%20increases."
   },
   {
     "section": "Water",

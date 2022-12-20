@@ -36,6 +36,9 @@ const GameLogic = ({updateBackground}) => {
   }
 
   const tryAgain = () => {
+    const userToUpdate = {...user}
+    userToUpdate.score = 0
+    setUser(userToUpdate)
     nextStage("General")
   }
 

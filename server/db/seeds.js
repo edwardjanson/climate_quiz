@@ -84,24 +84,24 @@ db.questions.insertMany([
       "2030"
     ],
     "more_info": [
-      "this is paragraph 1",
-      "this is paragraph 2",
-      "this is paragraph 3"
+      "A new study by UNESCO, in partnership with IUCN, shows that glaciers in a third of the 50 World Heritage sitest have been retreating at an accelerated rate since 2000 due to CO2 emissions.",
+      "They are currently losing 58 billion tons of ice every year - equivalent to the combined annual water use of France and Spain - and are responsible for nearly 5% of observed global sea-level rise.",
+      "Nevertheless it is still possible to save the glaciers in the remaining two thirds of sites if the rise in temperatures does not exceed 1.5°C compared to the pre-industrial period."
     ],
-    "more_info_link": "https://news.un.org/en/story/2022/11/1130157#:~:text=Some%20of%20the%20world's%20most,efforts%20to%20limit%20temperature%20increases."
+    "more_info_link": "https://www.unesco.org/en/articles/unesco-finds-some-iconic-world-heritage-glaciers-will-disappear-2050"
   },
   {
     "section": "Water",
     "question_type": "Bool",	
-    "question": "Climate change affects sea turtles to be born male or female, because most turtles are subject to temperature-dependent sex determination",
+    "question": "Climate change affects the determination of the sex of sea turtles",
     "correct_answer": "Fact",
     "incorrect_answers": [
       "Fiction" 
     ],
     "more_info": [
-      "this is paragraph 1",
-      "this is paragraph 2",
-      "this is paragraph 3"
+      "The sex of most turtles, alligators, and crocodiles is determined after fertilization.",
+      "The temperature of the developing eggs is what decides whether the offspring will be male or female.",
+      "This is called temperature-dependent sex determination, or TSD."
     ],
     "more_info_link": "https://oceanservice.noaa.gov/facts/temperature-dependent.html#:~:text=Research%20shows%20that%20if%20a,the%20hatchlings%20will%20be%20female."
   },
@@ -110,51 +110,51 @@ db.questions.insertMany([
   {
     "section": "Land",
     "question_type": "Multiple Choice",	
-    "question": "On average, how much waste did one person generate across the EU-27?",
-    "correct_answer": "5.2 tonnes",
+    "question": "On average, how much waste was generated per EU inhabitant in 2020?",
+    "correct_answer": "4.8 tonnes",
     "incorrect_answers": [
       "1 tonne", 
-      "17 tonnes", 
-      "337 tonnes"
+      "10 tonnes", 
+      "33 tonnes"
     ],
     "more_info": [
-      "this is paragraph 1",
-      "this is paragraph 2",
-      "this is paragraph 3"
+      "Solid waste contributes directly to greenhouse gas emissions through the generation of methane from the anaerobic decay of waste in landfills, and the emission of nitrous oxide from our solid waste combustion facilities.",
+      "Key to tackling the problem of plastic is establishing a circular economy.",
+      "Plastic that cannot be eliminated from the system needs to be reusable, recyclable or compostable."
     ],
-    "more_info_link": "hyperlink"
+    "more_info_link": "https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Waste_statistics"
   },
   {
     "section": "Land",
     "question_type": "Bool",	
-    "question": "The 3 R's to reducing land pollution are Reduce, Reuse, Recycle",
+    "question": "Just 16% of plastics are recycled - the rest goes to landfill for incineration, or is just dumped",
     "correct_answer": "TRUE",
     "incorrect_answers": [
       "False"
     ],
     "more_info": [
-      "this is paragraph 1",
-      "this is paragraph 2",
-      "this is paragraph 3"
+      "Much of the plastic that does not make it to the recycling plant ends up in our rivers and ocean.",
+      "Not only is this a danger to the animals and plants whose habitats have become aquatic garbage patches, but it also poses a threat to the climate, as plastic releases greenhouse gases as it slowly breaks down.",
+      "Sunlight and heat cause it to release methane and ethylene - and at increasing rate as the plastic breaks down into ever smaller pieces."
     ],
-    "more_info_link": "https://eartheclipse.com/environment/types-solutions-land-pollution.html"
+    "more_info_link": "https://www.weforum.org/agenda/2022/01/plastic-pollution-climate-change-solution/"
   },
   {
     "section": "Land",
     "question_type": "Multiple Choice",	
-    "question": "Which country has the highest ratio of global municipal waste to population?",
-    "correct_answer": "US",
+    "question": "What is the fastest-growing source of waste globally?",
+    "correct_answer": "Electronic waste",
     "incorrect_answers": [
-      "China",
-      "Brazil",
-      "India"
+      "Plastic waste",
+      "Food waste",
+      "Packaging waste"
     ],
     "more_info": [
-      "this is paragraph 1",
-      "this is paragraph 2",
-      "this is paragraph 3"
+      "Most e-waste does not get disposed of properly and releases harmful pollutants into the environment.",
+      "Globally, e-waste volumes grew to 53.6 million metric tons in 2019, an increase of 21% since 2014.",
+      "Of the 6.92 million tons of e-waste discarded by Americans in 2019, only 15% was recycled."
     ],
-    "more_info_link": "https://www.theguardian.com/us-news/2019/jul/02/us-plastic-waste-recycling"
+    "more_info_link": "https://www.weforum.org/agenda/2022/06/recycling-global-statistics-facts-plastic-paper/"
   },
   
   // Air

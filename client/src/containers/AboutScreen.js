@@ -68,7 +68,7 @@ const About = () => {
                         <a href='https://education.nationalgeographic.org/resource/pollution'>National Geographic pollution facts</a>
                     </li>
                     <li>
-                    <a href='https://www.wastecare.co.uk/9-shocking-statistics-about-waste/'>Statistics on waste</a>
+                    <a href='https://www.weforum.org/agenda/2022/01/plastic-pollution-climate-change-solution/'>Plastic pollution</a>
                     </li>
                     <li>
                     <a href='https://eartheclipse.com/environment/types-solutions-land-pollution.html'>Solutions for land pollution</a>

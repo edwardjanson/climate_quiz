@@ -2,7 +2,7 @@ import React from 'react'
 import styled, { keyframes } from 'styled-components'
 
 
-const GeneralBackground = () => {
+const GeneralBackground = ({updateBackground}) => {
 
   const images = {
     left: ["https://www.pngmart.com/files/3/School-of-Fish-Transparent-Background.png",
@@ -15,7 +15,7 @@ const GeneralBackground = () => {
             "https://www.pngmart.com/files/1/Fish-Meat.png"]
   }
 
-  console.log(images["left"][0])
+  updateBackground("https://images.theconversation.com/files/223729/original/file-20180619-126566-1jxjod2.jpg")
   
   return (
     <Container>

@@ -12,7 +12,7 @@ import SpaceBackground from '../components/SpaceBackground';
 import EndBackground from '../components/EndBackground';
 
 
-const QuestionsScreen = ({questions, stage, nextStage}) => {
+const QuestionsScreen = ({questions, stage, nextStage, updateBackground}) => {
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [questionAnswered, setQuestionAnswered] = useState(false);
@@ -78,22 +78,22 @@ const QuestionsScreen = ({questions, stage, nextStage}) => {
       }
       <>
         {stage === "General" ?
-        <GeneralBackground/> : ""}
+        <GeneralBackground updateBackground={updateBackground} /> : ""}
 
         {stage === "Water" ?
-        <WaterBackground/> : ""}
+        <WaterBackground updateBackground={updateBackground} /> : ""}
 
         {stage === "Land" ?
-        <LandBackground/> : ""}
+        <LandBackground updateBackground={updateBackground} /> : ""}
 
         {stage === "Air" ?
-        <AirBackground/> : ""}
+        <AirBackground updateBackground={updateBackground} /> : ""}
 
         {stage === "Space" ?
-        <SpaceBackground/> : ""}
+        <SpaceBackground updateBackground={updateBackground} /> : ""}
 
         {stage === "End" ?
-        <EndBackground/> : ""}
+        <EndBackground updateBackground={updateBackground} /> : ""}
       </>
     </Container>
   )

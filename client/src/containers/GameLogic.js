@@ -7,7 +7,7 @@ import EndScreen from './EndScreen';
 import QuestionsScreen from './QuestionsScreen';
 
 
-const GameLogic = () => {
+const GameLogic = ({updateBackground}) => {
 
   const [stage, changeStage] = useState("Start");
   const [allQuestions, setAllQuestions] = useState([]);
@@ -47,13 +47,13 @@ const GameLogic = () => {
   return (
       <>
         {stage === "Start" ? 
-        <StartScreen nextStage={nextStage} /> : ""}
+        <StartScreen nextStage={nextStage} updateBackground={updateBackground} /> : ""}
 
         {(stage === "General" || stage === "Water" || stage === "Land" || stage === "Air" || stage === "Space") ?
-        <QuestionsScreen nextStage={nextStage} questions={stageQuestions} stage={stage}/> : ""}
+        <QuestionsScreen nextStage={nextStage} questions={stageQuestions} stage={stage} updateBackground={updateBackground} /> : ""}
          
         {stage === "End" ? 
-        <EndScreen nextStage={nextStage} open={open} toggleModal={toggleModal} tryAgain={tryAgain}/> : ""}
+        <EndScreen nextStage={nextStage} open={open} toggleModal={toggleModal} tryAgain={tryAgain} updateBackground={updateBackground} /> : ""}
 
       </>
     );

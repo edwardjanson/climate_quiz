@@ -6,9 +6,10 @@ import TextBox from "../components/TextBox";
 import Title from "../components/Title";
 import NavItem from "../components/NavItem";
 import Input from "../components/Input";
+import StartBackground from "../components/StartBackground";
 
 
-const StartScreen = ({nextStage}) => {
+const StartScreen = ({nextStage, updateBackground}) => {
 
     const [nickname, changeNickname] = useState("");
 
@@ -26,6 +27,7 @@ const StartScreen = ({nextStage}) => {
 
     return (
         <div>
+            <StartBackground updateBackground={updateBackground} />
             <Navigation>
                 <NavItem><a href="/about">About</a></NavItem>
                 <NavItem onClick={openLeaderboard}>Leaderboard</NavItem>

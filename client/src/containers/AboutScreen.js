@@ -5,7 +5,7 @@ import NavItem from '../components/NavItem';
 import ContainerBox from '../components/ContainerBox';
 
 
-const About = () => {
+const AboutScreen = () => {
     
     const resourcesText = `Climate change is accelerating faster than previously thought, and it’s already having devastating effects.
     There’s no safe level of global warming. We’ve already warmed by 1.1 degrees and we’re at risk of triggering feedback loops. Every tenth of a degree of global warming is dangerous and puts the world at greater risk.
@@ -43,67 +43,96 @@ const About = () => {
     
     return (
 
-        <ContainerBox>
-            <Navigation>
-                <NavItem> <a href='/'>Home</a></NavItem>
-            </Navigation>
-            <h2>About</h2>
-            <section>
-                <p>To find out more about:</p>
-                <ul>
-                    General:
-                    <li>
-                        <a href='https://www.weforum.org/agenda/2022/11/cop27-10-key-climate-facts/'>10 key climate facts</a>
-                    </li>
-                    <li>
-                    <a href='https://www.un.org/en/climatechange/climate-fast-facts'>UN climate fast facts</a>
-                    </li>
-                    <li>
-                    <a href='https://www.globalcitizen.org/en/content/shocking-facts-david-attenborough-netflix-film/'>Climate facts from David Attenborough</a>
-                    </li>
-                </ul>
-                <ul>
-                    Land:
-                    <li>
-                        <a href='https://education.nationalgeographic.org/resource/pollution'>National Geographic pollution facts</a>
-                    </li>
-                    <li>
-                    <a href='https://www.wastecare.co.uk/9-shocking-statistics-about-waste/'>Statistics on waste</a>
-                    </li>
-                    <li>
-                    <a href='https://eartheclipse.com/environment/types-solutions-land-pollution.html'>Solutions for land pollution</a>
-                    </li>
-                </ul>
-                <ul>
-                    Air:
-                    <li>
-                        <a href='https://www.u-earth.eu/post/world-most-least-polluted-countries'>Most and least polluted countries</a>
-                    </li>
-                    <li>
-                    <a href='https://www.unep.org/news-and-stories/story/how-air-quality-measured'>Air quality - How is it measured?</a>
-                    </li>
-                    <li>
-                    <a href='https://education.nationalgeographic.org/resource/air-pollution'>National Geographic on air pollution</a>
-                    </li>
-                </ul>
-                <ul>
-                    Space:
-                    <li>
-                       <a href="https://www.nhm.ac.uk/discover/what-is-space-junk-and-why-is-it-a-problem.html">Space Junk</a>
-                    </li>
-                    <li>
-                       <a href="https://research.noaa.gov/article/ArtMID/587/ArticleID/2884/Projected-increase-in-space-travel-may-damage-ozone-layer">Space Travel and the ozone layer</a>
-                    </li>
-                    <li>
-                       <a href="https://www.nasa.gov/content/space-applications-of-hydrogen-and-fuel-cells">Fuel for space travel</a></li>
-                </ul> 
+        <Container>
+            <Box>
+                <Navigation>
+                    <NavItem> <a href='/'>Home</a></NavItem>
+                </Navigation>
+                <h2>About</h2>
+                <section>
+                    <p>To find out more about:</p>
+                    <ul>
+                        General:
+                        <li>
+                            <a href='https://www.weforum.org/agenda/2022/11/cop27-10-key-climate-facts/'>10 key climate facts</a>
+                        </li>
+                        <li>
+                        <a href='https://www.un.org/en/climatechange/climate-fast-facts'>UN climate fast facts</a>
+                        </li>
+                        <li>
+                        <a href='https://www.globalcitizen.org/en/content/shocking-facts-david-attenborough-netflix-film/'>Climate facts from David Attenborough</a>
+                        </li>
+                    </ul>
+                    <ul>
+                        Land:
+                        <li>
+                            <a href='https://education.nationalgeographic.org/resource/pollution'>National Geographic pollution facts</a>
+                        </li>
+                        <li>
+                        <a href='https://www.wastecare.co.uk/9-shocking-statistics-about-waste/'>Statistics on waste</a>
+                        </li>
+                        <li>
+                        <a href='https://eartheclipse.com/environment/types-solutions-land-pollution.html'>Solutions for land pollution</a>
+                        </li>
+                    </ul>
+                    <ul>
+                        Air:
+                        <li>
+                            <a href='https://www.u-earth.eu/post/world-most-least-polluted-countries'>Most and least polluted countries</a>
+                        </li>
+                        <li>
+                        <a href='https://www.unep.org/news-and-stories/story/how-air-quality-measured'>Air quality - How is it measured?</a>
+                        </li>
+                        <li>
+                        <a href='https://education.nationalgeographic.org/resource/air-pollution'>National Geographic on air pollution</a>
+                        </li>
+                    </ul>
+                    <ul>
+                        Space:
+                        <li>
+                        <a href="https://www.nhm.ac.uk/discover/what-is-space-junk-and-why-is-it-a-problem.html">Space Junk</a>
+                        </li>
+                        <li>
+                        <a href="https://research.noaa.gov/article/ArtMID/587/ArticleID/2884/Projected-increase-in-space-travel-may-damage-ozone-layer">Space Travel and the ozone layer</a>
+                        </li>
+                        <li>
+                        <a href="https://www.nasa.gov/content/space-applications-of-hydrogen-and-fuel-cells">Fuel for space travel</a></li>
+                    </ul> 
 
 
-            </section>
-            <p>{resourcesText}</p>
-        </ContainerBox>
+                </section>
+                <p>{resourcesText}</p>
+            </Box>
+        </Container>
     );
 }
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+`
+
+const Box = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.8);
+  width: 85%;
+  border-radius: 5px;
+
+  @media (min-width: 768px) {
+    width: 60%;
+  }
+
+  @media (min-width: 1200px) {
+    width: 40%;
+  }
+`
 
 const Navigation = styled.div`
   display: flex;
@@ -112,3 +141,5 @@ const Navigation = styled.div`
   justify-content: right;
   padding: 1rem;
 `
+
+export default AboutScreen;

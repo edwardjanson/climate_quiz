@@ -9,18 +9,23 @@ import AboutScreen from "./containers/AboutScreen";
 
 function App() {
 
+  const [background, setBackground] = useState("");
+
+  const updateBackground = (background) => {
+    setBackground(background);
+  }
+
   return (
     <Main>
-      <GlobalStyle/>
+      <GlobalStyle background={background} />
       <Router>
         <Routes>
-          <Route path="/" element={< GameLogic />} />
+          <Route path="/" element={< GameLogic updateBackground={updateBackground} />} />
           <Route path="/about" element={< AboutScreen />} />
         </Routes>
       </Router>
     </Main>
   )
-  
 }
 
 const GlobalStyle = createGlobalStyle`
@@ -28,6 +33,9 @@ const GlobalStyle = createGlobalStyle`
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
     color: black;
+    background-image: url(${(props) => props.background});
+    background-size: cover;
+    background-position: center center;
   }
 `
 

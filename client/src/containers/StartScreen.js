@@ -9,6 +9,8 @@ import Input from "../components/Input";
 import StartBackground from "../components/StartBackground";
 import ContainerBox from "../components/ContainerBox";
 import { postUser } from "../UsersService";
+import { Modal } from 'react-responsive-modal';
+import LeaderboardScreen from "./LeaderboardScreen";
 
 
 const StartScreen = ({nextStage, updateBackground, addNewUser, user, setUser,}) => {
@@ -31,13 +33,20 @@ const StartScreen = ({nextStage, updateBackground, addNewUser, user, setUser,}) 
             nextStage("General");
         });
     }
+    
+    const [open, setOpen] = useState(false);
+    
 
     return (
         <ContainerBox>
+             <Modal open={open} onClose={() => setOpen(false)}>
+                <LeaderboardScreen>
+                </LeaderboardScreen>
+            </Modal> 
             <StartBackground updateBackground={updateBackground} />
             <Navigation>
                 <NavItem><a href="/about">About</a></NavItem>
-                <NavItem onClick={openLeaderboard}>Leaderboard</NavItem>
+                <NavItem><button onClick={() => setOpen(true)}>Leaderboard</button></NavItem>
             </Navigation>
             <Title>Welcome to Climate Quiz</Title>
             <TextBox>Interesting facts that you may not know</TextBox>
@@ -45,6 +54,7 @@ const StartScreen = ({nextStage, updateBackground, addNewUser, user, setUser,}) 
                 <Input nickname={user.nickname} onChange={onInputChange}/>
                 <Button onClick={onStartClick}>Start</Button>
             </StartMenu>
+            
         </ContainerBox>
     )
 }

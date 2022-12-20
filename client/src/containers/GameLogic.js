@@ -14,7 +14,6 @@ const GameLogic = ({updateBackground}) => {
   const [stageQuestions, setStageQuestions] = useState([]);
   const [loaded, setLoaded] = useState(false)
   const [users, setUsers] = useState([]);
-  const [open, setOpen] = useState(false);
   const [user, setUser] = useState({})
   
   useEffect(() => {
@@ -34,10 +33,6 @@ const GameLogic = ({updateBackground}) => {
   const nextStage = (stage) => {
     setStageQuestions(allQuestions.filter(question => question.section === stage))
     changeStage(stage);
-  }
-
-  const toggleModal = () => {
-    setOpen(!open)
   }
 
   const tryAgain = () => {
@@ -60,7 +55,7 @@ const GameLogic = ({updateBackground}) => {
         <QuestionsScreen nextStage={nextStage} questions={stageQuestions} stage={stage} updateBackground={updateBackground} /> : ""}
          
         {stage === "End" ? 
-        <EndScreen nextStage={nextStage} open={open} toggleModal={toggleModal} tryAgain={tryAgain} updateBackground={updateBackground} /> : ""}
+        <EndScreen nextStage={nextStage} tryAgain={tryAgain} updateBackground={updateBackground} /> : ""}
 
       </>
     );

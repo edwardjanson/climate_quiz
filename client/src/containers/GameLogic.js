@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { getQuestions } from '../QuestionService';
 import { getUsers } from '../UsersService';
 import { ReactDOM } from 'react-dom';
+
+import { postUser, deleteUser } from "../UsersService";
 import StartScreen from "../containers/StartScreen";
 import EndScreen from './EndScreen';
 import QuestionsScreen from './QuestionsScreen';
@@ -42,24 +44,41 @@ const GameLogic = ({updateBackground}) => {
     nextStage("General")
   }
 
-  const addNewUser = (data) => {
-    const newUsers = [...users];
-    newUsers.push(data)
-    setUsers(newUsers)
+  const addNewUser = () => {
+    postUser(user)
+    .then(data => {
+      const newUsers = [...users];
+      newUsers.push(data);
+      setUsers(newUsers);
+      setUser(data);
+    });
   }
 
+  const removeUser = () => {
+    const newUsers = [...users];
+    const userIndex = newUsers.findIndex(searched_user => searched_user._id === user._id);
+    if (userIndex > -1) {
+      console.log("found");
+      newUsers.splice(userIndex, 1);
+      setUsers(newUsers);
+    }
+
+    const userReset = {nickname: user.nickname, score: 0};
+    setUser(userReset);
+    deleteUser(user._id);
+  };
 
   return (
       <>
         {stage === "Start" ? 
-        <StartScreen nextStage={nextStage} updateBackground={updateBackground} addNewUser={addNewUser} user={user} setUser={setUser} />  : ""}
+        <StartScreen users={users} nextStage={nextStage} updateBackground={updateBackground} user={user} setUser={setUser} />  : ""}
 
         {(stage === "General" || stage === "Water" || stage === "Land" || stage === "Air" || stage === "Space") ?
-        <QuestionsScreen nextStage={nextStage} questions={stageQuestions} stage={stage} updateBackground={updateBackground} user={user} setUser={setUser}/> : ""}
+
+        <QuestionsScreen addNewUser={addNewUser} nextStage={nextStage} questions={stageQuestions} stage={stage} updateBackground={updateBackground} user={user} setUser={setUser}/> : ""}
          
         {stage === "End" ? 
-        <EndScreen nextStage={nextStage} tryAgain={tryAgain} updateBackground={updateBackground} user={user}/> : ""}
-
+        <EndScreen removeUser={removeUser} users={users} user={user} nextStage={nextStage} tryAgain={tryAgain} updateBackground={updateBackground} /> : ""}
       </>
     );
     

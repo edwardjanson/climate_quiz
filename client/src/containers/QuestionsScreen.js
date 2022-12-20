@@ -14,7 +14,7 @@ import EndBackground from '../components/EndBackground';
 import ContainerBox from '../components/ContainerBox';
 
 
-const QuestionsScreen = ({questions, stage, nextStage, updateBackground, user, setUser}) => {
+const QuestionsScreen = ({addNewUser, questions, stage, nextStage, updateBackground, user, setUser}) => {
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [questionAnswered, setQuestionAnswered] = useState(false);
@@ -64,6 +64,7 @@ const QuestionsScreen = ({questions, stage, nextStage, updateBackground, user, s
           nextStage("Space");
           break;
         case "Space":
+          addNewUser();
           nextStage("End");
           break;
         case "End":

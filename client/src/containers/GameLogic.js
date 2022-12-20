@@ -7,6 +7,7 @@ import { postUser, deleteUser } from "../UsersService";
 import StartScreen from "../containers/StartScreen";
 import EndScreen from './EndScreen';
 import QuestionsScreen from './QuestionsScreen';
+import Icon from '../components/Icon';
 
 
 const GameLogic = ({updateBackground}) => {

@@ -2,11 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 
 import ContainerBox from './ContainerBox';
+import Icon from './Icon';
 
-const Image = ({question, onAnswer, questionTitle, answers}) => {
+const Image = ({question, onAnswer, questionTitle, answers, stage}) => {
 
   return (
     <ContainerBox>
+         <Icon stage={stage}/>
         <Question>{questionTitle}</Question>
         <p>Select one</p>
         <ImageContainer>

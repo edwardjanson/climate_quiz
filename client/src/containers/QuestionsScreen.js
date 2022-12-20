@@ -12,6 +12,7 @@ import AirBackground from '../components/AirBackground';
 import SpaceBackground from '../components/SpaceBackground';
 import EndBackground from '../components/EndBackground';
 import ContainerBox from '../components/ContainerBox';
+import Icon from '../components/Icon';
 
 
 const QuestionsScreen = ({addNewUser, questions, stage, nextStage, updateBackground, user, setUser}) => {
@@ -81,7 +82,7 @@ const QuestionsScreen = ({addNewUser, questions, stage, nextStage, updateBackgro
   return (
     <Container>
       {!questionAnswered ?
-        <Question question={questions[currentQuestion]} onAnswer={handleAnswerClick}/>
+        <Question question={questions[currentQuestion]} onAnswer={handleAnswerClick} stage={stage}/>
       :
         <Answer question={questions[currentQuestion]} onNextQuestion={nextQuestionClick} correctAnswer={correctAnswer}/>
       }

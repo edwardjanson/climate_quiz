@@ -29,7 +29,9 @@ const Box = styled.div`
   padding: 1rem;
   background: rgba(0, 0, 0, 0.8);
   width: 85%;
+  min-height: 20rem;
   border-radius: 5px;
+  min-height: 20rem;
 
   @media (min-width: 768px) {
     width: 60%;

@@ -24,12 +24,17 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 1.3rem;
 `
 
 const Rankings = styled.div`
+  margin-top: 1rem;
   display: flex;
   flex-direction: column;
   text-align: left;
+  gap: 0.5rem;
 `
 
 export default LeaderboardScreen;

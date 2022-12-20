@@ -12,7 +12,7 @@ import { Modal } from 'react-responsive-modal';
 import LeaderboardScreen from "./LeaderboardScreen";
 
 
-const StartScreen = ({users, nextStage, updateBackground, addNewUser, user, setUser,}) => {
+const StartScreen = ({users, nextStage, updateBackground, user, setUser}) => {
 
     const [open, setOpen] = useState(false);
 
@@ -23,6 +23,10 @@ const StartScreen = ({users, nextStage, updateBackground, addNewUser, user, setU
     }
 
     const onStartClick = () => {
+        if (!user.nickname) {
+            const newUser = {nickname: "Guest", score: 0};
+            setUser(newUser);
+        }
         nextStage("General");
     }
 
@@ -33,8 +37,8 @@ const StartScreen = ({users, nextStage, updateBackground, addNewUser, user, setU
             </Modal> 
             <StartBackground updateBackground={updateBackground} />
             <Navigation>
-                <NavItem><a href="/about">About</a></NavItem>
-                <NavItem><button onClick={() => setOpen(true)}>Leaderboard</button></NavItem>
+                <NavItem><Link href="/about">About</Link></NavItem>
+                <NavItem><NavButton onClick={() => setOpen(true)}>Leaderboard</NavButton></NavItem>
             </Navigation>
             <Title>Welcome to Climate Quiz</Title>
             <TextBox>Interesting facts that you may not know</TextBox>
@@ -49,10 +53,31 @@ const StartScreen = ({users, nextStage, updateBackground, addNewUser, user, setU
 
 const Navigation = styled.div`
     display: flex;
-    flex-direction: row;
     gap: 1rem;
     justify-content: right;
     padding: 1rem;
+`
+
+const Link = styled.a`
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+        font-weight: bold;
+        cursor: pointer;
+    }
+`
+
+const NavButton = styled.button`
+    background: transparent;
+    color: white;
+    border: 0;
+    font-size: 1rem;
+
+    &:hover {
+        font-weight: bold;
+        cursor: pointer;
+    }
 `
 
 const StartMenu = styled.div`

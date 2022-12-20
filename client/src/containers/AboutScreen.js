@@ -55,49 +55,49 @@ const AboutScreen = () => {
                     <ul>
                         General:
                         <li>
-                            <a href='https://www.weforum.org/agenda/2022/11/cop27-10-key-climate-facts/'>10 key climate facts</a>
+                            <a target="_blank" href='https://www.weforum.org/agenda/2022/11/cop27-10-key-climate-facts/'>10 key climate facts</a>
                         </li>
                         <li>
-                        <a href='https://www.un.org/en/climatechange/climate-fast-facts'>UN climate fast facts</a>
+                        <a target="_blank" href='https://www.un.org/en/climatechange/climate-fast-facts'>UN climate fast facts</a>
                         </li>
                         <li>
-                        <a href='https://www.globalcitizen.org/en/content/shocking-facts-david-attenborough-netflix-film/'>Climate facts from David Attenborough</a>
+                        <a target="_blank" href='https://www.globalcitizen.org/en/content/shocking-facts-david-attenborough-netflix-film/'>Climate facts from David Attenborough</a>
                         </li>
                     </ul>
                     <ul>
                         Land:
                         <li>
-                            <a href='https://education.nationalgeographic.org/resource/pollution'>National Geographic pollution facts</a>
+                            <a target="_blank" href='https://education.nationalgeographic.org/resource/pollution'>National Geographic pollution facts</a>
                         </li>
                         <li>
-                        <a href='https://www.weforum.org/agenda/2022/01/plastic-pollution-climate-change-solution/'>Plastic pollution</a>
+                        <a target="_blank" href='https://www.weforum.org/agenda/2022/01/plastic-pollution-climate-change-solution/'>Plastic pollution</a>
                         </li>
                         <li>
-                        <a href='https://eartheclipse.com/environment/types-solutions-land-pollution.html'>Solutions for land pollution</a>
+                        <a target="_blank" href='https://eartheclipse.com/environment/types-solutions-land-pollution.html'>Solutions for land pollution</a>
                         </li>
                     </ul>
                     <ul>
                         Air:
                         <li>
-                            <a href='https://www.u-earth.eu/post/world-most-least-polluted-countries'>Most and least polluted countries</a>
+                            <a target="_blank" href='https://www.u-earth.eu/post/world-most-least-polluted-countries'>Most and least polluted countries</a>
                         </li>
                         <li>
-                        <a href='https://www.unep.org/news-and-stories/story/how-air-quality-measured'>Air quality - How is it measured?</a>
+                        <a target="_blank" href='https://www.unep.org/news-and-stories/story/how-air-quality-measured'>Air quality - How is it measured?</a>
                         </li>
                         <li>
-                        <a href='https://education.nationalgeographic.org/resource/air-pollution'>National Geographic on air pollution</a>
+                        <a target="_blank" href='https://education.nationalgeographic.org/resource/air-pollution'>National Geographic on air pollution</a>
                         </li>
                     </ul>
                     <ul>
                         Space:
                         <li>
-                           <a href="https://www.nhm.ac.uk/discover/what-is-space-junk-and-why-is-it-a-problem.html">Space Junk</a>
+                           <a target="_blank" href="https://www.nhm.ac.uk/discover/what-is-space-junk-and-why-is-it-a-problem.html">Space Junk</a>
                         </li>
                         <li>
-                           <a href="https://research.noaa.gov/article/ArtMID/587/ArticleID/2884/Projected-increase-in-space-travel-may-damage-ozone-layer">Space Travel and the ozone layer</a>
+                           <a target="_blank" href="https://research.noaa.gov/article/ArtMID/587/ArticleID/2884/Projected-increase-in-space-travel-may-damage-ozone-layer">Space Travel and the ozone layer</a>
                         </li>
                         <li>
-                           <a href="https://spaceplace.nasa.gov/spacecraft-graveyard/en/">Satellites</a></li>
+                           <a target="_blank" href="https://spaceplace.nasa.gov/spacecraft-graveyard/en/">Satellites</a></li>
                     </ul> 
                     </section>
                     <p>{resourcesText}</p>

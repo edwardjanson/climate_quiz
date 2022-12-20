@@ -5,6 +5,7 @@ import { ReactDOM } from 'react-dom';
 import StartScreen from "../containers/StartScreen";
 import EndScreen from './EndScreen';
 import QuestionsScreen from './QuestionsScreen';
+import Icon from '../components/Icon';
 
 
 const GameLogic = ({updateBackground}) => {
@@ -54,8 +55,9 @@ const GameLogic = ({updateBackground}) => {
         {stage === "Start" ? 
         <StartScreen nextStage={nextStage} updateBackground={updateBackground} addNewUser={addNewUser} user={user} setUser={setUser} />  : ""}
 
-        {(stage === "General" || stage === "Water" || stage === "Land" || stage === "Air" || stage === "Space") ?
-        <QuestionsScreen nextStage={nextStage} questions={stageQuestions} stage={stage} updateBackground={updateBackground} user={user} setUser={setUser}/> : ""}
+        {(stage === "General" || stage === "Water" || stage === "Land" || stage === "Air" || stage === "Space") ? <>
+    
+        <QuestionsScreen nextStage={nextStage} questions={stageQuestions} stage={stage} updateBackground={updateBackground} user={user} setUser={setUser}/></>: ""}
          
         {stage === "End" ? 
         <EndScreen nextStage={nextStage} tryAgain={tryAgain} updateBackground={updateBackground} user={user}/> : ""}

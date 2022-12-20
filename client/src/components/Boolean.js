@@ -3,13 +3,13 @@ import styled from 'styled-components';
 
 import ContainerBox from './ContainerBox';
 import Button from './Button';
+import Icon from './Icon';
 
-
-const Boolean = ({questionTitle, onAnswer, answers}) => {
+const Boolean = ({questionTitle, onAnswer, answers, stage}) => {
 
   return (
     <ContainerBox>
-        <p>Icon</p>
+         <Icon stage={stage}/>
         <Question>{questionTitle}</Question>
           <Questions>
             <Button onClick={onAnswer}>{answers[0]}</Button>

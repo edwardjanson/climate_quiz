@@ -6,7 +6,7 @@ import Boolean from './Boolean';
 import Image from './Image';
 
 
-const Question = ({question, onAnswer}) => {
+const Question = ({question, onAnswer, stage}) => {
 
   const answers = [question.correct_answer, question.incorrect_answers].flat(1);
 
@@ -23,13 +23,13 @@ const Question = ({question, onAnswer}) => {
   return (
     <>
       {question.question_type === "Multiple Choice" ? 
-            <MultipleChoice questionTitle={question.question} answers={answers} onAnswer={onAnswer} /> : ""}
+            <MultipleChoice questionTitle={question.question} answers={answers} onAnswer={onAnswer} stage={stage} /> : ""}
 
       {question.question_type === "Bool" ? 
-            <Boolean questionTitle={question.question} answers={answers} onAnswer={onAnswer} /> : ""}
+            <Boolean questionTitle={question.question} answers={answers} onAnswer={onAnswer} stage={stage} /> : ""}
 
       {question.question_type === "Images" ? 
-            <Image questionTitle={question.question} answers={answers} onAnswer={onAnswer} /> : ""}
+            <Image questionTitle={question.question} answers={answers} onAnswer={onAnswer} stage={stage} /> : ""}
     </>
   )
 }

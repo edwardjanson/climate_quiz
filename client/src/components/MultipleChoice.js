@@ -3,12 +3,14 @@ import styled from 'styled-components';
 
 import ContainerBox from './ContainerBox';
 import Button from './Button';
+import Icon from './Icon';
 
 
-const MultipleChoice = ({questionTitle, answers, onAnswer}) => {
+const MultipleChoice = ({questionTitle, answers, onAnswer, stage}) => {
 
   return (
     <ContainerBox>
+      <Icon stage={stage}/>
       <Question>{questionTitle}</Question>
       <Questions>
         <Button onClick={onAnswer} >{answers[0]}</Button>

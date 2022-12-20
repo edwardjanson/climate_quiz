@@ -18,6 +18,8 @@ const Answer = ({question, onNextQuestion, correctAnswer}) => {
       <TextBox>{question.question_type !== "Images" ? 
                   correctAnswer ?
                   "You are correct"
+    
+                  
                   :
                   <>
                     Incorrect answer. The correct answer was: <br/>

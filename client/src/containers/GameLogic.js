@@ -52,10 +52,10 @@ const GameLogic = ({updateBackground}) => {
         <StartScreen nextStage={nextStage} updateBackground={updateBackground} addNewUser={addNewUser} user={user} setUser={setUser} />  : ""}
 
         {(stage === "General" || stage === "Water" || stage === "Land" || stage === "Air" || stage === "Space") ?
-        <QuestionsScreen nextStage={nextStage} questions={stageQuestions} stage={stage} updateBackground={updateBackground} /> : ""}
+        <QuestionsScreen nextStage={nextStage} questions={stageQuestions} stage={stage} updateBackground={updateBackground} user={user} setUser={setUser}/> : ""}
          
         {stage === "End" ? 
-        <EndScreen nextStage={nextStage} tryAgain={tryAgain} updateBackground={updateBackground} /> : ""}
+        <EndScreen nextStage={nextStage} tryAgain={tryAgain} updateBackground={updateBackground} user={user}/> : ""}
 
       </>
     );

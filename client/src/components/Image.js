@@ -1,25 +1,29 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import ContainerBox from './ContainerBox';
 
 const Image = ({question, onAnswer, questionTitle, answers}) => {
 
   return (
-    <Container>
+    <ContainerBox>
         <Question>{questionTitle}</Question>
         <p>Select one</p>
         <ImageContainer>
           <ImageItem onClick={onAnswer} src={answers[0]} />
           <ImageItem onClick={onAnswer} src={answers[1]} />
         </ImageContainer>
-    </Container>
+    </ContainerBox>
   );
 }
 
-const Container = styled.span`
+const Question = styled.p`
+  margin: 0;
+  padding-bottom: 1rem;
+  font-size: 1.2rem;
   text-align: center;
-
 `
+
 const ImageContainer = styled.span`
   display: flex;
   flex-direction: column;
@@ -31,9 +35,12 @@ const ImageContainer = styled.span`
 const ImageItem = styled.img`
   width: 18rem;
   height: 13rem;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+
+  &:hover {
+    cursor: pointer;
+    border: 1px solid white;
+  }
 `
 
-const Question = styled.p`
-
-`
 export default Image;

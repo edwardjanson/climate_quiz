@@ -2,6 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import NavItem from '../components/NavItem';
 
+import ContainerBox from '../components/ContainerBox';
+
+
 const About = () => {
     
     const resourcesText = `Climate change is accelerating faster than previously thought, and it’s already having devastating effects.
@@ -39,7 +42,8 @@ const About = () => {
     
     
     return (
-        <Container>
+
+        <ContainerBox>
             <Navigation>
                 <NavItem> <a href='/'>Home</a></NavItem>
             </Navigation>
@@ -97,12 +101,9 @@ const About = () => {
 
             </section>
             <p>{resourcesText}</p>
-        </Container>
+        </ContainerBox>
     );
 }
-
-const Container = styled.div`
-`
 
 const Navigation = styled.div`
   display: flex;
@@ -111,5 +112,3 @@ const Navigation = styled.div`
   justify-content: right;
   padding: 1rem;
 `
-
-export default About;

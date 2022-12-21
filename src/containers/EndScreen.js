@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Modal } from 'react-responsive-modal';
 import { useState } from 'react';
+import { Link } from "react-router-dom";
 
 import NavItem from "../components/NavItem"
 import ContainerBox from '../components/ContainerBox';
@@ -21,7 +22,7 @@ const EndScreen = ({removeUser, users, user, tryAgain}) => {
         <LeaderboardScreen users={users} />
       </Modal> 
       <Navigation>
-        <NavItem><Link href='/climate_quiz'>Home</Link></NavItem>
+        <NavItem><HrefLink href='/climate_quiz'>Home</HrefLink></NavItem>
       </Navigation>
       <EndCard>
         <Title>{!scoreRemoved ? `Your score: ${user.score}` : "Your score was removed."}</Title>
@@ -33,7 +34,7 @@ const EndScreen = ({removeUser, users, user, tryAgain}) => {
         }>
           {!scoreRemoved ? "Remove Your Score" : "Score Removed"}
         </Button>
-        <ButtonLink href='/climate_quiz/about'><Button>About</Button></ButtonLink>
+        <Link to="/about"><Button>About</Button></Link>
         <Button onClick={tryAgain}>Try Again</Button>
       </EndCard>
     </ContainerBox>
@@ -47,6 +48,25 @@ const EndCard = styled.div`
   justify-content: center;
   gap: 2rem;
   padding: 2rem;
+
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: black !important;
+    cursor: pointer;
+  }
+
+  a:active {
+    background: white;
+    color: black;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+  }
+
 `
 
 const Navigation = styled.div`
@@ -57,7 +77,7 @@ const Navigation = styled.div`
   padding: 1rem;
 `
 
-const Link = styled.a`
+const HrefLink = styled.a`
   color: white;
   text-decoration: none;
 
@@ -68,20 +88,6 @@ const Link = styled.a`
 `
 
 const ButtonLink = styled.a`
-  color: white;
-  text-decoration: none;
-
-  &:hover {
-      color: black;
-      cursor: pointer;
-  }
-
-  &:active {
-    background: white;
-    color: black;
-    cursor: pointer;
-    border: 1px solid rgba(0, 0, 0, 0.5);
-  }
 `
 
 export default EndScreen;

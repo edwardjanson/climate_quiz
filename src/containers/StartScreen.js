@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import styled from 'styled-components';
+import { Link } from "react-router-dom";
 
 import Button from "../components/Button";
 import TextBox from "../components/TextBox";
@@ -40,7 +41,7 @@ const StartScreen = ({users, nextStage, updateBackground, user, setUser}) => {
             </Modal> 
             <StartBackground updateBackground={updateBackground} />
             <Navigation>
-                <NavItem><Link href="/climate_quiz/about">About</Link></NavItem>
+                <NavItem><Link to="/about">About</Link></NavItem>
                 <NavItem><NavButton onClick={() => setOpen(true)}>Leaderboard</NavButton></NavItem>
             </Navigation>
             <Title>Climate Quiz</Title>
@@ -59,15 +60,15 @@ const Navigation = styled.div`
     gap: 1rem;
     justify-content: right;
     padding: 1rem;
-`
 
-const Link = styled.a`
+    & a {
     color: white;
     text-decoration: none;
 
     &:hover {
         font-weight: bold;
         cursor: pointer;
+    }
     }
 `
 

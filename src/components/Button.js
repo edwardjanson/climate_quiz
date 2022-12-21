@@ -22,14 +22,14 @@ const StyledButton = styled.button`
 
   &:hover {
     background: white;
-    color: black;
+    color: black !important;
     cursor: pointer;
     border: 1px solid rgba(0, 0, 0, 0.5);
   }
 
   &:active {
     background: white;
-    color: black;
+    color: black !important;
     cursor: pointer;
     border: 1px solid rgba(0, 0, 0, 0.5);
   }

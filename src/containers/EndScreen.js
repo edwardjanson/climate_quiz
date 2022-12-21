@@ -21,7 +21,7 @@ const EndScreen = ({removeUser, users, user, tryAgain}) => {
         <LeaderboardScreen users={users} />
       </Modal> 
       <Navigation>
-        <NavItem><Link href='/'>Home</Link></NavItem>
+        <NavItem><Link href='/climate_quiz'>Home</Link></NavItem>
       </Navigation>
       <EndCard>
         <Title>{!scoreRemoved ? `Your score: ${user.score}` : "Your score was removed."}</Title>

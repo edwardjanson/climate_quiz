@@ -70,12 +70,11 @@ const AboutScreen = () => {
     });
     
     return (
-
-
+      
         <Container>
             <Box>
                 <Navigation>
-                  <NavItem> <Link href='/'>Home</Link></NavItem>
+                  <NavItem> <Link href='/climate_quiz'>Home</Link></NavItem>
                 </Navigation>
                 <Section>
                   <Title>About</Title>

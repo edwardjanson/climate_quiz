@@ -1,16 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import ProgressionBar from './ProgressionBar';
 import ContainerBox from './ContainerBox';
 import Button from './Button';
 import Icon from './Icon';
 
 
-const MultipleChoice = ({questionTitle, answers, onAnswer, stage}) => {
+const MultipleChoice = ({questionTitle, answers, onAnswer, stage, progress}) => {
 
   return (
     <ContainerBox>
       <Icon stage={stage}/>
+      <ProgressionBar progress={progress}/>
       <Question>{questionTitle}</Question>
       <Questions>
         <Button onClick={onAnswer} >{answers[0]}</Button>

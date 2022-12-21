@@ -17,8 +17,9 @@ const GameLogic = ({updateBackground}) => {
   const [stageQuestions, setStageQuestions] = useState([]);
   const [loaded, setLoaded] = useState(false)
   const [users, setUsers] = useState([]);
-  const [user, setUser] = useState({})
-  
+  const [user, setUser] = useState({});
+  const [progress, updateProgress] = useState({});
+
   useEffect(() => {
     if (!loaded) {
       const getAllData = async () => {
@@ -27,6 +28,7 @@ const GameLogic = ({updateBackground}) => {
         setAllQuestions(gatheredQuestions);
         setUsers(gatheredUsers);
         setLoaded(true);
+        updateProgress({questionNumber: 0, questionLength: gatheredQuestions.length});
       }
 
       getAllData();
@@ -43,6 +45,10 @@ const GameLogic = ({updateBackground}) => {
     userToUpdate.score = 0
     setUser(userToUpdate)
     nextStage("General")
+
+    const newQuestionNumber = {...progress};
+    newQuestionNumber["questionNumber"] = 0;
+    updateProgress(newQuestionNumber) 
   }
 
   const addNewUser = () => {
@@ -57,6 +63,12 @@ const GameLogic = ({updateBackground}) => {
       setUsers(newUsers);
       setUser(data);
     });
+  }
+
+  const updateQuestionNumber = () => {
+    const newQuestionNumber = {...progress};
+    newQuestionNumber["questionNumber"] += 1;
+    updateProgress(newQuestionNumber) 
   }
 
   const removeUser = () => {
@@ -80,7 +92,7 @@ const GameLogic = ({updateBackground}) => {
 
         {(stage === "General" || stage === "Water" || stage === "Land" || stage === "Air" || stage === "Space") ?
 
-        <QuestionsScreen addNewUser={addNewUser} nextStage={nextStage} questions={stageQuestions} stage={stage} updateBackground={updateBackground} user={user} setUser={setUser}/> : ""}
+        <QuestionsScreen addNewUser={addNewUser} nextStage={nextStage} questions={stageQuestions} stage={stage} updateBackground={updateBackground} user={user} setUser={setUser} updateQuestionNumber={updateQuestionNumber} progress={progress}/> : ""}
          
         {stage === "End" ? 
         <EndScreen removeUser={removeUser} users={users} user={user} nextStage={nextStage} tryAgain={tryAgain} updateBackground={updateBackground} /> : ""}

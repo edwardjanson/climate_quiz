@@ -1,15 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import ProgressionBar from './ProgressionBar';
 import ContainerBox from './ContainerBox';
 import Button from './Button';
 import Icon from './Icon';
 
-const Boolean = ({questionTitle, onAnswer, answers, stage}) => {
+const Boolean = ({questionTitle, onAnswer, answers, stage, progress}) => {
 
   return (
     <ContainerBox>
-         <Icon stage={stage}/>
+        <Icon stage={stage}/>
+        <ProgressionBar progress={progress}/>
         <Question>{questionTitle}</Question>
           <Questions>
             <Button onClick={onAnswer}>{answers[0]}</Button>

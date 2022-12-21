@@ -15,7 +15,7 @@ import ContainerBox from '../components/ContainerBox';
 import Icon from '../components/Icon';
 
 
-const QuestionsScreen = ({addNewUser, questions, stage, nextStage, updateBackground, user, setUser}) => {
+const QuestionsScreen = ({addNewUser, questions, stage, nextStage, updateBackground, user, setUser, updateQuestionNumber, progress}) => {
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [questionAnswered, setQuestionAnswered] = useState(false);
@@ -48,6 +48,8 @@ const QuestionsScreen = ({addNewUser, questions, stage, nextStage, updateBackgro
   }
 
   const nextQuestionClick = () => {
+    updateQuestionNumber();
+
     if (currentQuestion + 1 === questions.length){
       setCurrentQuestion(0);
       setQuestionAnswered(false);
@@ -82,9 +84,9 @@ const QuestionsScreen = ({addNewUser, questions, stage, nextStage, updateBackgro
   return (
     <Container>
       {!questionAnswered ?
-        <Question question={questions[currentQuestion]} onAnswer={handleAnswerClick} stage={stage}/>
+        <Question question={questions[currentQuestion]} onAnswer={handleAnswerClick} stage={stage} progress={progress}/>
       :
-        <Answer question={questions[currentQuestion]} onNextQuestion={nextQuestionClick} correctAnswer={correctAnswer} stage={stage}/>
+        <Answer question={questions[currentQuestion]} onNextQuestion={nextQuestionClick} correctAnswer={correctAnswer} stage={stage} progress={progress}/>
       }
       <>
         {stage === "General" ?

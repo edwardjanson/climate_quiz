@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/climate_quiz/static/css/main.0eead319.css",
-    "main.js": "/climate_quiz/static/js/main.2d97f195.js",
+    "main.js": "/climate_quiz/static/js/main.10841d42.js",
     "static/js/787.c4e7f8f9.chunk.js": "/climate_quiz/static/js/787.c4e7f8f9.chunk.js",
     "static/media/general_image.png": "/climate_quiz/static/media/general_image.e845f8ceeca8b6b1f168.png",
     "static/media/space_image.png": "/climate_quiz/static/media/space_image.70fc0a646a8b9008ca68.png",
@@ -9,11 +9,11 @@
     "static/media/land_image.png": "/climate_quiz/static/media/land_image.6bf14b0572ccc97dd463.png",
     "index.html": "/climate_quiz/index.html",
     "main.0eead319.css.map": "/climate_quiz/static/css/main.0eead319.css.map",
-    "main.2d97f195.js.map": "/climate_quiz/static/js/main.2d97f195.js.map",
+    "main.10841d42.js.map": "/climate_quiz/static/js/main.10841d42.js.map",
     "787.c4e7f8f9.chunk.js.map": "/climate_quiz/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0eead319.css",
-    "static/js/main.2d97f195.js"
+    "static/js/main.10841d42.js"
   ]
 }

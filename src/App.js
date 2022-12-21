@@ -21,7 +21,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/climate_quiz" element={< GameLogic updateBackground={updateBackground} />} />
-          <Route path="/about" element={< AboutScreen />} />
+          <Route path="/climate_quiz/about" element={< AboutScreen />} />
         </Routes>
       </Router>
     </Main>

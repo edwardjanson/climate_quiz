@@ -40,7 +40,7 @@ const StartScreen = ({users, nextStage, updateBackground, user, setUser}) => {
             </Modal> 
             <StartBackground updateBackground={updateBackground} />
             <Navigation>
-                <NavItem><Link href="/about">About</Link></NavItem>
+                <NavItem><Link href="/climate_quiz/about">About</Link></NavItem>
                 <NavItem><NavButton onClick={() => setOpen(true)}>Leaderboard</NavButton></NavItem>
             </Navigation>
             <Title>Climate Quiz</Title>

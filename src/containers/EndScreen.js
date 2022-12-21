@@ -33,7 +33,7 @@ const EndScreen = ({removeUser, users, user, tryAgain}) => {
         }>
           {!scoreRemoved ? "Remove Your Score" : "Score Removed"}
         </Button>
-        <ButtonLink href='/about'><Button>About</Button></ButtonLink>
+        <ButtonLink href='/climate_quiz/about'><Button>About</Button></ButtonLink>
         <Button onClick={tryAgain}>Try Again</Button>
       </EndCard>
     </ContainerBox>

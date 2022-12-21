@@ -46,6 +46,10 @@ const GameLogic = ({updateBackground}) => {
   }
 
   const addNewUser = () => {
+    if (user._id) {
+      delete user._id;
+    }
+
     postUser(user)
     .then(data => {
       const newUsers = [...users];

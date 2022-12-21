@@ -84,7 +84,7 @@ const QuestionsScreen = ({addNewUser, questions, stage, nextStage, updateBackgro
       {!questionAnswered ?
         <Question question={questions[currentQuestion]} onAnswer={handleAnswerClick} stage={stage}/>
       :
-        <Answer question={questions[currentQuestion]} onNextQuestion={nextQuestionClick} correctAnswer={correctAnswer}/>
+        <Answer question={questions[currentQuestion]} onNextQuestion={nextQuestionClick} correctAnswer={correctAnswer} stage={stage}/>
       }
       <>
         {stage === "General" ?

@@ -7,14 +7,16 @@ import TextBox from './TextBox';
 import Button from './Button';
 import ContainerBox from './ContainerBox';
 import InformationScreen from '../containers/InformationScreen';
+import Icon from './Icon';
 
 
-const Answer = ({question, onNextQuestion, correctAnswer}) => {
+const Answer = ({question, onNextQuestion, correctAnswer, stage}) => {
 
   const [open, setOpen] = useState(false);
 
   return (
     <ContainerBox>
+      <Icon stage={stage}/>
       <TextBox>{question.question_type !== "Images" ? 
                   correctAnswer ?
                   "You are correct!"

@@ -6,32 +6,28 @@ import Icon from './Icon'
 const SpaceBackground = ({updateBackground}) => {
 
   const images = {
-    left: ["https://www.pngmart.com/files/3/School-of-Fish-Transparent-Background.png",
-            "https://www.pngmart.com/files/3/Real-Fish-PNG-Picture.png",
-            "https://www.pngmart.com/files/4/Blue-Whale-PNG-Transparent.png",
-            "https://www.pngmart.com/files/3/Real-Fish-PNG-Picture.png"],
-    right: ["https://www.pngmart.com/files/3/Ocean-Fish-PNG-Photos.png",
-            "https://www.pngmart.com/files/1/Fish-Meat.png",
-            "https://www.pngmart.com/files/1/Fish-Meat.png",
-            "https://www.pngmart.com/files/1/Fish-Meat.png"]
+    left: [ "https://i.imgur.com/SktspbF.png",
+            "https://i.imgur.com/qXiPcpu.png",
+            "https://i.imgur.com/elpE8ax.png",],
+    right: ["https://i.imgur.com/lpb51Zu.png",
+            "https://i.imgur.com/KwyY8t1.png",
+            "https://i.imgur.com/KwyY8t1.png"]
   }
 
-  updateBackground("https://images.theconversation.com/files/223729/original/file-20180619-126566-1jxjod2.jpg")
+  updateBackground("https://wallpaperset.com/w/full/9/f/3/123382.jpg")
   
   return (
     <Container>
       <div className="animations left">
-        <div><img src={images["left"][0]} width="250px"></img></div>
+        <div><img src={images["left"][0]} width="350px"></img></div>
         <div><img src={images["left"][1]} width="150px"></img></div>
-        <div><img src={images["left"][2]} width="300px" ></img></div>
-        <div><img src={images["left"][3]} width="100px"></img></div>       
+        <div><img src={images["left"][2]} width="200px" ></img></div>      
       </div>
      
       <div className="animations right">
-        <div><img src={images["right"][0]} width="225px"></img></div>
-        <div><img src={images["right"][1]} width="100px"></img></div>
-        <div><img src={images["right"][2]} width="200px" ></img></div>
-        <div><img src={images["right"][3]} width="150px"></img></div>         
+        <div><img src={images["right"][0]} width="75px"></img></div>
+        <div><img src={images["right"][1]} width="10px"></img></div>
+        <div><img src={images["right"][2]} width="600px" ></img></div>        
       </div>
     </Container>
   )

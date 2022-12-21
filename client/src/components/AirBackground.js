@@ -21,7 +21,7 @@ const AirBackground = ({updateBackground}) => {
   return (
     <Container>
       <div className="animations left">
-        <div><img src={images["left"][0]} width="200px"></img></div>
+        <div><img src={images["left"][0]} width="175px"></img></div>
         <div><img src={images["left"][1]} width="150px"></img></div>
         <div><img src={images["left"][2]} width="250px" ></img></div>
         <div><img src={images["left"][3]} width="100px"></img></div>       
@@ -30,7 +30,7 @@ const AirBackground = ({updateBackground}) => {
       <div className="animations right">
         <div><img src={images["right"][0]} width="225px"></img></div>
         <div><img src={images["right"][1]} width="100px"></img></div>
-        <div><img src={images["right"][2]} width="200px" ></img></div>
+        <div><img src={images["right"][2]} width="160px" ></img></div>
         <div><img src={images["right"][3]} width="100px"></img></div>         
       </div>
     </Container>

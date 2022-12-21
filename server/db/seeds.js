@@ -68,8 +68,8 @@ db.questions.insertMany([
     ],
     "more_info": [
       "Polar ice caps are melting as global warming causes climate change.",
-      "this is paragraph 2",
-      "this is paragraph 3"
+      "We lose Arctic sea ice at a rate of almost 13% per decade, and over the past 30 years, the oldest and thickest ice in the Arctic has declined by a stunning 95%.",
+      "Limiting the increase in global temperature is our best chance of securing a safer future for all, preventing even more damaging consequences than we’ve already seen."
     ],
     "more_info_link": "https://www.worldwildlife.org/pages/six-ways-loss-of-arctic-ice-impacts-everyone"
   },

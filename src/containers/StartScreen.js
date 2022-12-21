@@ -24,7 +24,10 @@ const StartScreen = ({users, nextStage, updateBackground, user, setUser}) => {
 
     const onStartClick = () => {
         if (!user.nickname) {
-            const newUser = {nickname: "Guest", score: 0};
+            const newUser = {nickname: "Guest", score: 0, _id: 1};
+            setUser(newUser);
+        } else {
+            const newUser = {nickname: user.nickname, score: 0, _id: 1};
             setUser(newUser);
         }
         nextStage("General");
@@ -73,6 +76,7 @@ const NavButton = styled.button`
     color: white;
     border: 0;
     font-size: 1rem;
+    margin-top: -1rem;
 
     &:hover {
         font-weight: bold;

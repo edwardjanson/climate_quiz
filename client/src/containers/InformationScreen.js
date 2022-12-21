@@ -15,7 +15,7 @@ const InformationScreen = ({info_paragraphs, question_link}) => {
     <Container>
       <Title>Information</Title>
       <TextBox>{paragraphs}</TextBox>
-      <Link href={question_link}>Find out more</Link>
+      <Link href={question_link} target="_blank" rel="noopener noreferrer">Find out more</Link>
     </Container>
   )
 }

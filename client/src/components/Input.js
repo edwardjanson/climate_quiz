@@ -5,15 +5,20 @@ import styled from 'styled-components';
 const Input = ({nickname, onChange}) => {
 
   return (
-    <Nickname type="text" value={nickname} onChange={onChange}></Nickname>
+    <Nickname placeholder="Enter your nickname" type="text" value={nickname} onChange={onChange}></Nickname>
   );
 }
 
 const Nickname = styled.input`
-  width: 9rem;
+  color: white;
+  background: rgba(0, 0, 0, 0.2);
+  height: 1.2rem;
+  min-width: 9rem;
+  padding: 0.5rem;
   text-align: center;
-  margin: 0.25rem;
-  padding: 0.25rem; 
+  margin: 1rem;
+  border-radius: 5px;
+  border: 1px solid white;
 `
 
 export default Input;

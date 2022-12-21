@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import ProgressionBar from './ProgressionBar';
 import ContainerBox from './ContainerBox';
 import Icon from './Icon';
+import TextBox from './TextBox';
 
 const Image = ({question, onAnswer, questionTitle, answers, stage, progress}) => {
 
@@ -11,7 +12,7 @@ const Image = ({question, onAnswer, questionTitle, answers, stage, progress}) =>
         <Icon stage={stage}/>
         <ProgressionBar progress={progress}/>
         <Question>{questionTitle}</Question>
-        <p>Select one</p>
+        <TextBox>Select one</TextBox>
         <ImageContainer>
           <ImageItem onClick={onAnswer} src={answers[0]} />
           <ImageItem onClick={onAnswer} src={answers[1]} />
@@ -25,6 +26,7 @@ const Question = styled.p`
   padding-bottom: 1rem;
   font-size: 1.2rem;
   text-align: center;
+  width: 90%;
 `
 
 const ImageContainer = styled.span`
@@ -32,7 +34,8 @@ const ImageContainer = styled.span`
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  margin-bottom: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
 `
 
 const ImageItem = styled.img`

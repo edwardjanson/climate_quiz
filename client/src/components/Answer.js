@@ -49,7 +49,7 @@ const Answer = ({question, onNextQuestion, correctAnswer, stage, progress}) => {
 }
 
 const Buttons = styled.div`
-  margin-top: 2rem;
+  margin: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -57,6 +57,7 @@ const Buttons = styled.div`
 `
 
 const ImageItem = styled.img`
+  margin: 1rem auto 0;
   width: 18rem;
   height: 13rem;
 `

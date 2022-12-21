@@ -23,6 +23,12 @@ const InformationScreen = ({info_paragraphs, question_link}) => {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 90%;
+  margin: auto;
+  font-size: 1.3rem;
 `
 
 const Link = styled.a`

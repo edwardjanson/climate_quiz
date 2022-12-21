@@ -40,8 +40,8 @@ const StartScreen = ({users, nextStage, updateBackground, user, setUser}) => {
                 <NavItem><Link href="/about">About</Link></NavItem>
                 <NavItem><NavButton onClick={() => setOpen(true)}>Leaderboard</NavButton></NavItem>
             </Navigation>
-            <Title>Welcome to Climate Quiz</Title>
-            <TextBox>Interesting facts that you may not know</TextBox>
+            <Title>Climate Quiz</Title>
+            <TextBox>Test your knowledge on climate change!</TextBox>
             <StartMenu>
                 <Input nickname={user.nickname} onChange={onInputChange}/>
                 <Button onClick={onStartClick}>Start</Button>

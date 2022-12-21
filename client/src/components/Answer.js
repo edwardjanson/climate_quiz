@@ -29,7 +29,7 @@ const Answer = ({question, onNextQuestion, correctAnswer, stage, progress}) => {
                   </>
                 :
                   correctAnswer ?
-                  "You are correct"
+                  "You are correct!"
                   :
                   <>
                     Incorrect answer. The correct answer was: <br/><br/>

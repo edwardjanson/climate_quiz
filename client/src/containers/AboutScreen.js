@@ -77,70 +77,74 @@ const AboutScreen = () => {
                 <Navigation>
                   <NavItem> <Link href='/'>Home</Link></NavItem>
                 </Navigation>
-                <Title>About</Title>
                 <Section>
-                    <p>To find out more about:</p>
-                    <ul>
-                        General:
-                        <li>
-                            <Link target="_blank" href='https://www.weforum.org/agenda/2022/11/cop27-10-key-climate-facts/'>10 key climate facts</Link>
-                        </li>
-                        <li>
-                        <Link target="_blank" href='https://www.un.org/en/climatechange/climate-fast-facts'>UN climate fast facts</Link>
-                        </li>
-                        <li>
-                        <Link target="_blank" href='https://www.globalcitizen.org/en/content/shocking-facts-david-attenborough-netflix-film/'>Climate facts from David Attenborough</Link>
-                        </li>
-                    </ul>
-                    <ul>
-                        Land:
-                        <li>
-                            <Link target="_blank" href='https://education.nationalgeographic.org/resource/pollution'>National Geographic pollution facts</Link>
-                        </li>
-                        <li>
-                        <Link target="_blank" href='https://www.weforum.org/agenda/2022/01/plastic-pollution-climate-change-solution/'>Plastic pollution</Link>
-                        </li>
-                        <li>
-                        <Link target="_blank" href='https://eartheclipse.com/environment/types-solutions-land-pollution.html'>Solutions for land pollution</Link>
-                        </li>
-                    </ul>
-                    <ul>
-                        Air:
-                        <li>
-                            <Link target="_blank" href='https://www.u-earth.eu/post/world-most-least-polluted-countries'>Most and least polluted countries</Link>
-                        </li>
-                        <li>
-                        <Link target="_blank" href='https://www.unep.org/news-and-stories/story/how-air-quality-measured'>Air quality - How is it measured?</Link>
-                        </li>
-                        <li>
-                        <Link target="_blank" href='https://education.nationalgeographic.org/resource/air-pollution'>National Geographic on air pollution</Link>
-                        </li>
-                    </ul>
-                    <ul>
-                        Space:
-                        <li>
-                           <Link target="_blank" href="https://www.nhm.ac.uk/discover/what-is-space-junk-and-why-is-it-a-problem.html">Space Junk</Link>
-                        </li>
-                        <li>
-                           <Link target="_blank" href="https://research.noaa.gov/article/ArtMID/587/ArticleID/2884/Projected-increase-in-space-travel-may-damage-ozone-layer">Space Travel and the ozone layer</Link>
-                        </li>
-                        <li>
-                           <Link target="_blank" href="https://spaceplace.nasa.gov/spacecraft-graveyard/en/">Satellites</Link></li>
-                    </ul> 
-                    </Section>
-                    <p>{paragraphs}</p>
+                  <Title>About</Title>
+                  <p>To find out more about:</p>
+                  <ul>
+                      General:
+                      <li>
+                          <Link target="_blank" href='https://www.weforum.org/agenda/2022/11/cop27-10-key-climate-facts/'>10 key climate facts</Link>
+                      </li>
+                      <li>
+                      <Link target="_blank" href='https://www.un.org/en/climatechange/climate-fast-facts'>UN climate fast facts</Link>
+                      </li>
+                      <li>
+                      <Link target="_blank" href='https://www.globalcitizen.org/en/content/shocking-facts-david-attenborough-netflix-film/'>Climate facts from David Attenborough</Link>
+                      </li>
+                  </ul>
+                  <ul>
+                      Land:
+                      <li>
+                          <Link target="_blank" href='https://education.nationalgeographic.org/resource/pollution'>National Geographic pollution facts</Link>
+                      </li>
+                      <li>
+                      <Link target="_blank" href='https://www.weforum.org/agenda/2022/01/plastic-pollution-climate-change-solution/'>Plastic pollution</Link>
+                      </li>
+                      <li>
+                      <Link target="_blank" href='https://eartheclipse.com/environment/types-solutions-land-pollution.html'>Solutions for land pollution</Link>
+                      </li>
+                  </ul>
+                  <ul>
+                      Air:
+                      <li>
+                          <Link target="_blank" href='https://www.u-earth.eu/post/world-most-least-polluted-countries'>Most and least polluted countries</Link>
+                      </li>
+                      <li>
+                      <Link target="_blank" href='https://www.unep.org/news-and-stories/story/how-air-quality-measured'>Air quality - How is it measured?</Link>
+                      </li>
+                      <li>
+                      <Link target="_blank" href='https://education.nationalgeographic.org/resource/air-pollution'>National Geographic on air pollution</Link>
+                      </li>
+                  </ul>
+                  <ul>
+                      Space:
+                      <li>
+                          <Link target="_blank" href="https://www.nhm.ac.uk/discover/what-is-space-junk-and-why-is-it-a-problem.html">Space Junk</Link>
+                      </li>
+                      <li>
+                          <Link target="_blank" href="https://research.noaa.gov/article/ArtMID/587/ArticleID/2884/Projected-increase-in-space-travel-may-damage-ozone-layer">Space Travel and the ozone layer</Link>
+                      </li>
+                      <li>
+                          <Link target="_blank" href="https://spaceplace.nasa.gov/spacecraft-graveyard/en/">Satellites</Link></li>
+                  </ul> 
+                  </Section>
+                  <Paragraphs>
+                    {paragraphs}
+                  </Paragraphs>
             </Box>
         </Container>
     );
 }
 
 const Container = styled.div`
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   color: white;
-  margin: 1rem;
+  background: url("https://www.isaaa.org/kc/cropbiotechupdate/files/images/811202181331AM.jpg");
+  background-position: center center;
 `
 
 const Box = styled.div`
@@ -148,9 +152,9 @@ const Box = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
-  background: rgba(0, 0, 0, 0.8);
-  width: 85%;
+  background: rgba(0, 0, 0, 0.9);
+  width: 90%;
+  margin: 2rem 0%;
   border-radius: 5px;
 
   @media (min-width: 768px) {
@@ -163,9 +167,14 @@ const Box = styled.div`
 `
 
 const Section = styled.div`
-  width: 100%;
+  width: 80%;
   display: flex;
   flex-direction: column;
+`
+
+const Paragraphs = styled.div`
+  width: 80%;
+  margin-bottom: 2rem;
 `
 
 const Navigation = styled.div`

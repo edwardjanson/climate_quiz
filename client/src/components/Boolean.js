@@ -33,7 +33,7 @@ const Questions = styled.div`
   flex-direction: column;
   gap: 1rem;
   width: 90%;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 `
 
 export default Boolean;

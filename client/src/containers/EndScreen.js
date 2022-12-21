@@ -46,7 +46,7 @@ const EndCard = styled.div`
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  padding: 1rem;
+  padding: 2rem;
 `
 
 const Navigation = styled.div`

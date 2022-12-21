@@ -29,6 +29,7 @@ const Question = styled.p`
   font-size: 1.2rem;
   text-align: center;
   margin-bottom: 1rem;
+  width: 90%;
 `
 
 const Questions = styled.div`
@@ -36,7 +37,7 @@ const Questions = styled.div`
   flex-direction: column;
   gap: 1rem;
   width: 90%;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 `
 
 export default MultipleChoice;

@@ -20,7 +20,7 @@ function App() {
       <GlobalStyle background={background} />
       <Router>
         <Routes>
-          <Route path="/" element={< GameLogic updateBackground={updateBackground} />} />
+          <Route path="/climate_quiz" element={< GameLogic updateBackground={updateBackground} />} />
           <Route path="/about" element={< AboutScreen />} />
         </Routes>
       </Router>

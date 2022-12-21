@@ -5,32 +5,28 @@ import styled, { keyframes } from 'styled-components'
 const LandBackground = ({updateBackground}) => {
 
   const images = {
-    left: ["https://www.pngmart.com/files/3/School-of-Fish-Transparent-Background.png",
-            "https://www.pngmart.com/files/3/Real-Fish-PNG-Picture.png",
-            "https://www.pngmart.com/files/4/Blue-Whale-PNG-Transparent.png",
-            "https://www.pngmart.com/files/3/Real-Fish-PNG-Picture.png"],
-    right: ["https://www.pngmart.com/files/3/Ocean-Fish-PNG-Photos.png",
-            "https://www.pngmart.com/files/1/Fish-Meat.png",
-            "https://www.pngmart.com/files/1/Fish-Meat.png",
-            "https://www.pngmart.com/files/1/Fish-Meat.png"]
+    left: ["https://www.pngarts.com/files/1/Clouds-PNG-Image.png",
+            "https://www.pngarts.com/files/1/Clouds-PNG-Image.png",
+            "https://www.pngarts.com/files/1/Clouds-PNG-Image.png"],
+    right: ["https://www.pngarts.com/files/1/Clouds-PNG-Image.png",
+            "https://www.pngarts.com/files/1/Clouds-PNG-Image.png",
+            "https://www.pngarts.com/files/1/Clouds-PNG-Image.png"]
   }
 
-  updateBackground("https://images.theconversation.com/files/223729/original/file-20180619-126566-1jxjod2.jpg")
+  updateBackground("https://images.pexels.com/photos/459728/pexels-photo-459728.jpeg")
   
   return (
     <Container>
       <div className="animations left">
-        <div><img src={images["left"][0]} width="250px"></img></div>
-        <div><img src={images["left"][1]} width="150px"></img></div>
-        <div><img src={images["left"][2]} width="300px" ></img></div>
-        <div><img src={images["left"][3]} width="100px"></img></div>       
+        <div><img src={images["left"][0]} width="800px"></img></div>
+        <div><img src={images["left"][1]} width="600"></img></div>
+        <div><img src={images["left"][2]} width="500px" ></img></div>   
       </div>
      
       <div className="animations right">
-        <div><img src={images["right"][0]} width="225px"></img></div>
-        <div><img src={images["right"][1]} width="100px"></img></div>
-        <div><img src={images["right"][2]} width="200px" ></img></div>
-        <div><img src={images["right"][3]} width="150px"></img></div>         
+        <div><img src={images["right"][0]} width="900px"></img></div>
+        <div><img src={images["right"][1]} width="700px"></img></div>
+        <div><img src={images["right"][2]} width="400px" ></img></div>       
       </div>
     </Container>
   )
@@ -40,18 +36,22 @@ const LandBackground = ({updateBackground}) => {
 
 const left = keyframes`
   0% {
+    opacity: 0;
     left: -10%;
   }
   100% {
+    opacity: 1;
     left: 110%;
   }
 `
 
 const right = keyframes`
   0% {
+    opacity: 0;
     right: -10%;
   }
   100% {
+    opacity: 1;
     right: 110%;
   }
 `
@@ -78,52 +78,40 @@ const Container = styled.div`
 
   // left animations
   .left div:nth-child(1) {
-    bottom: 20%; 
-    animation: ${left} 15s linear infinite;
+    bottom: 80%; 
+    animation: ${left} 7s linear infinite;
     animation-delay: -2s;
   }
 
   .left div:nth-child(2) {
     bottom: 70%; 
-    animation: ${left} 15s linear infinite;
+    animation: ${left} 10s linear infinite;
     animation-delay: -4s;
   }
 
   .left div:nth-child(3) {
-    bottom: 10%; 
-    animation: ${left} 20s linear infinite;
-    animation-delay: -7s;
-  }
-
-  .left div:nth-child(4) {
-    bottom: 50%; 
-    animation: ${left} 18s linear infinite; 
-    animation-delay: -5s;
+    bottom: 70%; 
+    animation: ${left} 15s linear infinite;
+    animation-delay: -4s;
   }
 
   // right animations
   .right div:nth-child(1) {
-    bottom: 60%; 
-    animation: ${right} 15s linear infinite;
+    bottom: 70%; 
+    animation: ${right} 6s linear infinite;
     animation-delay: -2s;
   }
 
   .right div:nth-child(2) {
-    bottom: 40%; 
-    animation: ${right} 15s linear infinite;
+    bottom: 55%; 
+    animation: ${right} 9s linear infinite;
     animation-delay: -4s;
   }
 
   .right div:nth-child(3) {
-    bottom: 80%; 
-    animation: ${right} 20s linear infinite;
+    bottom: 65%; 
+    animation: ${right} 14s linear infinite;
     animation-delay: -7s;
-  }
-
-  .right div:nth-child(4) {
-    bottom: 30%; 
-    animation: ${right} 18s linear infinite; 
-    animation-delay: -5s;
   }
 `
 

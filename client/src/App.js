@@ -36,6 +36,7 @@ const GlobalStyle = createGlobalStyle`
     background-image: url(${(props) => props.background});
     background-size: cover;
     background-position: center center;
+    background-repeat: no-repeat;
 
     .react-responsive-modal-modal {
       width: 100%;

@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import { createGlobalStyle } from 'styled-components';
 import styled from 'styled-components';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 import GameLogic from "./containers/GameLogic";
 import AboutScreen from "./containers/AboutScreen";
@@ -18,12 +18,12 @@ function App() {
   return (
     <Main>
       <GlobalStyle background={background} />
-      <Router>
+      <HashRouter>
         <Routes>
-          <Route path="/climate_quiz" element={< GameLogic updateBackground={updateBackground} />} />
-          <Route path="/climate_quiz/about" element={< AboutScreen />} />
+          <Route exact path="/" element={< GameLogic updateBackground={updateBackground} />} />
+          <Route path="/about" element={< AboutScreen />} />
         </Routes>
-      </Router>
+      </HashRouter>
     </Main>
   )
 }

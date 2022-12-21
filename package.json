@@ -1,6 +1,6 @@
 {
   "name": "client",
-  "homepage": "https://edwardjanson.github.io/climate_quiz",
+  "homepage": "https://edwardjanson.github.io/climate_quiz/#",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

@@ -8,15 +8,17 @@ import Button from './Button';
 import ContainerBox from './ContainerBox';
 import InformationScreen from '../containers/InformationScreen';
 import Icon from './Icon';
+import ProgressionBar from './ProgressionBar';
 
 
-const Answer = ({question, onNextQuestion, correctAnswer, stage}) => {
+const Answer = ({question, onNextQuestion, correctAnswer, stage, progress}) => {
 
   const [open, setOpen] = useState(false);
 
   return (
     <ContainerBox>
       <Icon stage={stage}/>
+      <ProgressionBar progress={progress}/>
       <TextBox>{question.question_type !== "Images" ? 
                   correctAnswer ?
                   "You are correct!"

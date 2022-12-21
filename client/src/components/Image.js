@@ -1,14 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import ProgressionBar from './ProgressionBar';
 import ContainerBox from './ContainerBox';
 import Icon from './Icon';
 
-const Image = ({question, onAnswer, questionTitle, answers, stage}) => {
+const Image = ({question, onAnswer, questionTitle, answers, stage, progress}) => {
 
   return (
     <ContainerBox>
-         <Icon stage={stage}/>
+        <Icon stage={stage}/>
+        <ProgressionBar progress={progress}/>
         <Question>{questionTitle}</Question>
         <p>Select one</p>
         <ImageContainer>
